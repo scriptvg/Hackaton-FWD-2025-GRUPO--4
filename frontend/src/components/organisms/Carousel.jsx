@@ -3,7 +3,7 @@ import { useCarousel } from "../../hooks/useCarousel";
 import images from "../data/imgs";
 import Slide from "../molecules/Slide";
 import NavigationButtons from "../atoms/NavigationButtons";
-import Dots from "../atoms/Dots";
+import Dots from "../atoms/Dots/";
 
 function Carousel() {
   const {

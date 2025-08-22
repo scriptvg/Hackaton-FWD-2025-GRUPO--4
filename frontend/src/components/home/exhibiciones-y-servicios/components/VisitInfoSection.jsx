@@ -1,5 +1,5 @@
 // src/components/VisitInfoSection.jsx
-import FeatureCard from "../../../atoms/FeatureCard";
+import FeatureCard from "../../../atoms/FeatureCardeCard";
 import { Calendar, Users, ShoppingCart, Fish, Award, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
