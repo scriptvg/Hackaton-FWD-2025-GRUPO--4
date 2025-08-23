@@ -2,14 +2,12 @@ import { MapPin, Mail, Phone, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 
-// Contact section with map, contact info, and email form
 export default function ContactSection() {
   const nombre = useRef(null);
   const correo = useRef(null);
   const asunto = useRef(null);
   const mensaje = useRef(null);
 
-  // Send email using EmailJS
   const enviar = () => {
     const Datos = {
       nombre: nombre.current.value,
@@ -21,37 +19,45 @@ export default function ContactSection() {
     emailjs
       .send("service_ke9gzcs", "template_cho3xqg", Datos, "3mQx8AVIUbbufg0BX")
       .then(
-        (response) => {
-          console.log("Éxito:", response.status, response.text);
-          alert("Mensaje enviado correctamente");
-        },
-        (error) => {
-          console.error("Error:", error);
-          alert("Hubo un problema al enviar el mensaje");
-        }
+        () => alert("Mensaje enviado correctamente"),
+        () => alert("Hubo un problema al enviar el mensaje")
       );
   };
 
   return (
     <section
-      className="bg-[#f8f9fa] py-20 px-4"
       role="region"
       aria-label="Sección de contacto y ubicación"
+      className="
+        bg-[#f8f9fa] dark:bg-[var(--background)]
+        py-20 px-4 transition-colors duration-300
+      "
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 uppercase">
+        {/* Heading */}
+        <h2
+          className="
+            text-3xl md:text-4xl font-extrabold text-center uppercase
+            text-gray-900 dark:text-[var(--foreground)]
+          "
+        >
           Ubicación y Contacto
         </h2>
-        <div className="w-20 h-1 bg-[#1CB6B0] mx-auto my-4 rounded"></div>
-        <p className="text-center text-gray-600 mb-10">
+        <div className="w-20 h-1 bg-[#1CB6B0] mx-auto my-4 rounded" />
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-10">
           Visítanos y descubre la maravilla de la biodiversidad marina de Costa Rica
         </p>
 
-        {/* Layout: map + contact form */}
+        {/* Grid: mapa + formulario */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Map and contact details */}
-          <div className="bg-white shadow-lg rounded-xl p-6">
+          {/* Mapa y detalles */}
+          <div
+            className="
+              bg-white dark:bg-[var(--card)]
+              shadow-lg dark:shadow-none
+              rounded-xl p-6 transition-colors duration-300
+            "
+          >
             <div className="rounded overflow-hidden mb-6">
               <iframe
                 title="Mapa Parque Marino"
@@ -62,40 +68,62 @@ export default function ContactSection() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded"
-              ></iframe>
+              />
             </div>
 
-            {/* Contact info */}
-            <div className="space-y-5 text-gray-800">
+            <div className="space-y-5 text-gray-800 dark:text-[var(--foreground)]">
               <div className="flex items-start gap-3">
                 <MapPin className="text-[#1CB6B0] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg">Ubicación</h4>
-                  <p className="text-sm text-gray-600">Puntarenas, Costa Rica</p>
-                  <p className="text-sm text-gray-400">A 100 metros del muelle principal</p>
+                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                    Ubicación
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Puntarenas, Costa Rica
+                  </p>
+                  <p className="text-sm text-gray-400 dark:text-gray-500">
+                    A 100 metros del muelle principal
+                  </p>
                 </div>
               </div>
+
               <div className="flex items-start gap-3">
                 <Phone className="text-[#1CB6B0] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg">Teléfono</h4>
-                  <p className="text-sm text-gray-600">+506 2661-5270</p>
+                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                    Teléfono
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    +506 2661-5270
+                  </p>
                 </div>
               </div>
+
               <div className="flex items-start gap-3">
                 <Mail className="text-[#1CB6B0] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg">Correo Electrónico</h4>
-                  <p className="text-sm text-gray-600">info@parquemarino.co.cr</p>
+                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                    Correo Electrónico
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    info@parquemarino.co.cr
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Formulario de contacto mejorado */}
-          <div className="bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
-            <h3 className="text-[#1CB6B0] text-xl font-bold mb-6 flex items-center gap-2">
-              <Mail className="w-5 h-5" /> Envíanos un Mensaje
+          {/* Formulario de contacto */}
+          <div
+            className="
+              bg-white dark:bg-[var(--card)]
+              border border-gray-100 dark:border-gray-700
+              shadow-xl dark:shadow-none
+              rounded-2xl p-8 transition-colors duration-300
+            "
+          >
+            <h3 className="flex items-center gap-2 text-[#1CB6B0] text-xl font-bold mb-6">
+              <Mail className="w-5 h-5" aria-hidden="true" /> Envíanos un Mensaje
             </h3>
 
             <form
@@ -106,37 +134,50 @@ export default function ContactSection() {
               className="space-y-6"
               aria-label="Formulario de contacto"
             >
-              {/* Nombre y Correo */}
+              {/* Nombre y correo */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nombre
-                  </label>
-                  <input
-                    id="nombre"
-                    type="text"
-                    ref={nombre}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1CB6B0] text-sm"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="correo" className="block text-sm font-medium text-gray-700 mb-1">
-                    Correo Electrónico
-                  </label>
-                  <input
-                    id="correo"
-                    type="email"
-                    ref={correo}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1CB6B0] text-sm"
-                  />
-                </div>
+                {[
+                  { id: "nombre", label: "Nombre", ref: nombre, type: "text" },
+                  {
+                    id: "correo",
+                    label: "Correo Electrónico",
+                    ref: correo,
+                    type: "email",
+                  },
+                ].map(({ id, label, ref, type }) => (
+                  <div key={id}>
+                    <label
+                      htmlFor={id}
+                      className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                    >
+                      {label}
+                    </label>
+                    <input
+                      id={id}
+                      type={type}
+                      ref={ref}
+                      required
+                      className="
+                        w-full px-4 py-3
+                        border border-gray-300 dark:border-gray-600
+                        rounded-md shadow-sm
+                        bg-white dark:bg-[var(--input)]
+                        text-gray-700 dark:text-gray-200
+                        focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                        transition-colors duration-300
+                        text-sm
+                      "
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Asunto */}
               <div>
-                <label htmlFor="asunto" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="asunto"
+                  className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                >
                   Asunto
                 </label>
                 <input
@@ -144,13 +185,25 @@ export default function ContactSection() {
                   type="text"
                   ref={asunto}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1CB6B0] text-sm"
+                  className="
+                    w-full px-4 py-3
+                    border border-gray-300 dark:border-gray-600
+                    rounded-md shadow-sm
+                    bg-white dark:bg-[var(--input)]
+                    text-gray-700 dark:text-gray-200
+                    focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                    transition-colors duration-300
+                    text-sm
+                  "
                 />
               </div>
 
               {/* Mensaje */}
               <div>
-                <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="mensaje"
+                  className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                >
                   Mensaje
                 </label>
                 <textarea
@@ -158,16 +211,34 @@ export default function ContactSection() {
                   rows="6"
                   ref={mensaje}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1CB6B0] text-sm resize-none"
-                ></textarea>
+                  className="
+                    w-full px-4 py-3
+                    border border-gray-300 dark:border-gray-600
+                    rounded-md shadow-sm
+                    bg-white dark:bg-[var(--input)]
+                    text-gray-700 dark:text-gray-200
+                    focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                    transition-colors duration-300
+                    text-sm resize-none
+                  "
+                />
               </div>
 
-              {/* Botón */}
+              {/* Enviar */}
               <button
                 type="submit"
-                className="w-full bg-[#1CB6B0] hover:bg-[#139a95] text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0]"
+                className="
+                  w-full
+                  bg-[#1CB6B0] hover:bg-[#139a95]
+                  dark:bg-[var(--primary)] dark:hover:bg-[var(--primary-foreground)]
+                  text-white font-semibold py-3 rounded-md
+                  flex items-center justify-center gap-2
+                  transition-colors duration-200
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0]
+                "
+                aria-label="Enviar mensaje"
               >
-                Enviar Mensaje <Send className="w-4 h-4" />
+                Enviar Mensaje <Send className="w-4 h-4" aria-hidden="true" />
               </button>
             </form>
           </div>

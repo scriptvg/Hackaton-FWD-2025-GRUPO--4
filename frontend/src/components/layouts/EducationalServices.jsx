@@ -36,17 +36,23 @@ const services = [
 export default function EducationalServices() {
   return (
     <section
-      className="py-20 bg-white text-center"
       role="region"
       aria-label="Servicios educativos del parque marino"
+      className="
+        py-20 px-4
+        bg-white dark:bg-[var(--background)]
+        text-center text-gray-900 dark:text-[var(--foreground)]
+        transition-colors duration-300
+      "
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
         {/* Section heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 uppercase">
+        <h2 className="text-3xl md:text-4xl font-extrabold uppercase
+                       text-gray-900 dark:text-[var(--foreground)]">
           Descubre nuestros servicios educativos
         </h2>
         <div className="w-24 h-1 bg-[#1CB6B0] mx-auto my-4 rounded"></div>
-        <p className="text-gray-600 mb-12 max-w-xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto">
           Programas diseñados para todas las edades que promueven la educación ambiental y la conservación marina
         </p>
 
@@ -55,7 +61,15 @@ export default function EducationalServices() {
           {services.map((s, i) => (
             <div
               key={i}
-              className="group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 focus-within:ring-2 focus-within:ring-[#1CB6B0]"
+              className="
+                group rounded-xl overflow-hidden
+                bg-white dark:bg-[var(--card)]
+                border border-gray-200 dark:border-gray-700
+                shadow-sm dark:shadow-none
+                hover:shadow-lg transition duration-300
+                focus-within:ring-2 focus-within:ring-[#1CB6B0]
+                focus-within:ring-offset-2 dark:focus-within:ring-offset-[var(--background)]
+              "
               tabIndex={0}
               aria-label={`${s.title}: ${s.description}`}
             >
@@ -64,7 +78,8 @@ export default function EducationalServices() {
                 <img
                   src={s.img}
                   alt={`Imagen de ${s.title}`}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-48 object-cover
+                             transition-transform duration-300 group-hover:scale-105"
                 />
                 {s.tag && (
                   <span
@@ -80,20 +95,29 @@ export default function EducationalServices() {
                 <h3 className="text-lg font-bold text-[#1CB6B0] tracking-tight">
                   {s.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{s.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {s.description}
+                </p>
 
                 <div className="flex items-center justify-between mt-4">
                   <button
-                    className="bg-[#1CB6B0] hover:bg-[#139a95] text-white text-sm px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0] transition"
+                    className="
+                      bg-[#1CB6B0] hover:bg-[#139a95]
+                      text-white text-sm px-4 py-2 rounded-md font-medium
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0]
+                      transition-colors duration-200
+                    "
                     aria-label={`Acción: ${s.action} para ${s.title}`}
                   >
                     {s.action}
                   </button>
-                  <span className="text-sm font-semibold text-gray-700">{s.detail}</span>
+                  <span className="text-sm font-semibold
+                                   text-gray-700 dark:text-gray-400">
+                    {s.detail}
+                  </span>
                 </div>
               </div>
             </div>
-
           ))}
         </div>
 
@@ -101,7 +125,15 @@ export default function EducationalServices() {
         <div className="mt-12">
           <Link
             to="/exhibiciones-y-servicios/servicios-educativos"
-            className="inline-flex items-center gap-2 px-6 py-2 text-[#1CB6B0] border border-[#1CB6B0] rounded-md hover:bg-[#e6f7f6] transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]"
+            className="
+              inline-flex items-center gap-2 px-6 py-2 text-sm font-medium
+              border border-[#1CB6B0] rounded-md
+              text-[#1CB6B0] hover:bg-[#e6f7f6]
+              dark:border-[var(--primary)] dark:text-[var(--primary)]
+              dark:hover:bg-[var(--card)]
+              transition-colors duration-200
+              focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+            "
             aria-label="Ver todos los servicios educativos"
           >
             Ver todos los servicios educativos

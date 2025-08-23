@@ -4,7 +4,7 @@ import Tanque from "@assets/img/fotos.verticales_(1).jpg"
 import AboutSection from '../../layouts/AboutSection'
 import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
 import OurApproach from './components/DescriptionSection'
-import TabsContainer from './components/TabsContainer'
+import TabsContainer from '../../atoms/TabsContainer'
 import SuccessCases from './components/SuccessCases'
 import CallToAction from './components/CallToAction'
 import CultivoTab from './components/tabs/CultivoTab'
@@ -12,13 +12,13 @@ import TecnologiaTab from './components/tabs/TecnologiaTab'
 import ExtensionTab from './components/tabs/ExtensionTab'
 import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
 import { Link } from 'react-router-dom'
-import InvestigationTabs from './components/tabs/investigacion/InvestigacionTab'
+import InvestigationTabs from '../../molecules/InvestigacionTab'
 /* import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion'; */
 import { proyectos } from './data/proyectosData.js';
 import { publicaciones, publicacionesStats  } from './data/publicacionesData.js';
 import { colaboradores, redes  } from './data/colaboradoresData.js';
 import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab';
-import ColaboracionesTab from './components/tabs/investigacion/ColaboracionesTab';
+import ColaboracionesTab from '../../molecules/ColaboracionesTab';
 import GranjasTab from './components/tabs/GranjasTab.jsx'
 
 function AcuiculturaBiotecnologia() {

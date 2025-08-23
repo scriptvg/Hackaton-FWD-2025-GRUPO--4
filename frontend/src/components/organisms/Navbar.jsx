@@ -85,7 +85,7 @@ export default function Navbar() {
   const dropdownItemVariants = { hidden: { opacity: 0, y: -5 }, visible: { opacity: 1, y: 0 } };
 
   return (
-    <nav className={`w-full fixed top-0 z-50 bg-white shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
+    <nav className={`w-full fixed top-0 z-50 bg-background shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
       <TopBarRedes />
 
       {/* Main navbar */}
@@ -101,10 +101,10 @@ export default function Navbar() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           />
           <div className="leading-tight flex flex-col">
-            <span className="text-base font-bold text-gray-900 uppercase tracking-wider group-hover:text-teal-600 transition-colors">
+            <span className="text-base font-bold text-foreground uppercase tracking-wider group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
               PARQUE MARINO
             </span>
-            <span className="text-xs text-gray-600 group-hover:text-teal-600 transition-colors">
+            <span className="text-xs text-muted-foreground group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
               DEL PACÍFICO
             </span>
           </div>
@@ -124,13 +124,13 @@ export default function Navbar() {
                 <>
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="flex items-center gap-1 text-gray-900 font-medium transition-all relative py-2 px-3"
+                    className="flex items-center gap-1 text-foreground font-medium transition-all relative py-2 px-3"
                   >
                     {link.name}
                     <motion.span animate={{ rotate: dropdownOpen === index ? 180 : 0 }} transition={{ duration: 0.2 }}>
                       <ChevronDownIcon className="w-4 h-4" />
                     </motion.span>
-                    <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
+                    <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 dark:bg-teal-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
                   </button>
                   <AnimatePresence>
                     {dropdownOpen === index && (
@@ -139,13 +139,13 @@ export default function Navbar() {
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
-                        className="absolute left-0 mt-2 w-56 bg-white shadow-2xl rounded-lg z-50 border border-teal-100 py-2"
+                        className="absolute left-0 mt-2 w-56 bg-popover shadow-2xl rounded-lg z-50 border border-border py-2"
                       >
                         {link.sublinks.map((sublink) => (
                           <motion.div key={sublink.href} variants={dropdownItemVariants}>
                             <Link
                               to={sublink.href}
-                              className="block px-5 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-md"
+                              className="block px-5 py-2 text-sm text-popover-foreground hover:bg-accent hover:text-accent-foreground rounded-md"
                               onClick={() => setDropdownOpen(null)}
                             >
                               {sublink.name}
@@ -159,10 +159,10 @@ export default function Navbar() {
               ) : (
                 <Link
                   to={link.href}
-                  className="text-gray-900 font-medium transition-all relative py-2 px-3"
+                  className="text-foreground font-medium transition-all relative py-2 px-3"
                 >
                   {link.name}
-                  <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
+                  <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 dark:bg-teal-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
                 </Link>
               )}
             </motion.li>
@@ -173,14 +173,14 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4 self-center">
           <Link
             to={DonarLink.href}
-            className="bg-teal-500 hover:bg-teal-600 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
+            className="bg-teal-500 dark:bg-teal-600 hover:bg-teal-600 dark:hover:bg-teal-700 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
             <BiDonateHeart className="w-4 h-4" />
             {DonarLink.name}
           </Link>
           <Link
             to={ticketLink.href}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
+            className="bg-orange-500 dark:bg-orange-600 hover:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
             <Ticket className="w-4 h-4" />
             {ticketLink.name}
@@ -197,19 +197,19 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-48 bg-white shadow-xl rounded-lg z-50 border border-teal-100 py-2"
+                    className="absolute right-0 mt-2 w-48 bg-popover shadow-xl rounded-lg z-50 border border-border py-2"
                   >
-                    <div className="px-4 py-2 border-b border-gray-100">
-                      <p className="text-sm font-medium text-gray-800">{user.name}</p>
-                      <p className="text-xs text-gray-500">{user.email}</p>
+                    <div className="px-4 py-2 border-b border-border">
+                      <p className="text-sm font-medium text-foreground">{user.name}</p>
+                      <p className="text-xs text-muted-foreground">{user.email}</p>
                     </div>
-                    <Link to="/perfil" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700">
+                    <Link to="/perfil" className="flex items-center px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground">
                       <User className="w-4 h-4 mr-2" />
                       Mi Perfil
                     </Link>
                     <button
                       onClick={() => logout()}
-                      className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
+                      className="flex w-full items-center px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       <LogOut className="w-4 h-4 mr-2" />
                       Cerrar Sesión
@@ -224,7 +224,7 @@ export default function Navbar() {
         {/* Menú móvil */}
         <motion.button 
           onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden p-2 rounded-lg text-gray-900"
+          className="md:hidden p-2 rounded-lg text-foreground"
           whileTap={{ scale: 0.95 }}
         >
           <AnimatePresence mode="wait">
@@ -249,7 +249,7 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="md:hidden bg-white px-4 py-4 space-y-3 shadow-xl border-t border-teal-100"
+            className="md:hidden bg-background px-4 py-4 space-y-3 shadow-xl border-t border-border"
           >
             {links.map((link) => (
               <motion.div key={link.name} variants={mobileItemVariants}>
@@ -257,7 +257,7 @@ export default function Navbar() {
                   <>
                     <button
                       onClick={() => toggleDropdown(links.indexOf(link))}
-                      className="flex items-center justify-between w-full font-medium text-gray-900 py-3 px-2 rounded-lg hover:bg-gray-50"
+                      className="flex items-center justify-between w-full font-medium text-foreground py-3 px-2 rounded-lg hover:bg-accent"
                     >
                       {link.name}
                       <motion.span animate={{ rotate: dropdownOpen === links.indexOf(link) ? 180 : 0 }}>
@@ -271,7 +271,7 @@ export default function Navbar() {
                             <Link
                               key={sublink.href}
                               to={sublink.href}
-                              className="block py-2 px-2 text-gray-700 hover:text-teal-700 hover:bg-teal-50 rounded-md"
+                              className="block py-2 px-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md"
                               onClick={() => setIsOpen(false)}
                             >
                               {sublink.name}
@@ -284,7 +284,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={link.href}
-                    className="block py-3 px-2 text-gray-900 font-medium hover:text-teal-700 hover:bg-gray-50 rounded-lg"
+                    className="block py-3 px-2 text-foreground font-medium hover:text-teal-700 dark:hover:text-teal-400 hover:bg-accent rounded-lg"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -292,12 +292,12 @@ export default function Navbar() {
                 )}
               </motion.div>
             ))}
-            <div className="pt-4 border-t border-teal-100 space-y-3">
-              <Link to={DonarLink.href} className="flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
+            <div className="pt-4 border-t border-border space-y-3">
+              <Link to={DonarLink.href} className="flex items-center justify-center gap-2 bg-teal-500 dark:bg-teal-600 hover:bg-teal-600 dark:hover:bg-teal-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
                 <BiDonateHeart className="w-5 h-5" />
                 {DonarLink.name}
               </Link>
-              <Link to={ticketLink.href} className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
+              <Link to={ticketLink.href} className="flex items-center justify-center gap-2 bg-orange-500 dark:bg-orange-600 hover:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
                 <Ticket className="w-5 h-5" />
                 {ticketLink.name}
               </Link>

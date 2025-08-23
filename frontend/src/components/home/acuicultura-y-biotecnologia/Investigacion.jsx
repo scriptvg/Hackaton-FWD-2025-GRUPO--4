@@ -2,9 +2,9 @@ import React from 'react'
 import QuienesSomos from '../../molecules/QuienesSomos'
 import Tanque from "@assets/img/fotos.verticales_(1).jpg"
 import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
-import TabsContainer from './components/TabsContainer'
-import ColaboracionesTab from './components/tabs/investigacion/ColaboracionesTab.jsx'
-import InvestigacionTab from './components/tabs/investigacion/InvestigacionTab'
+import TabsContainer from '../../atoms/TabsContainer'
+import ColaboracionesTab from '../../molecules/ColaboracionesTab.jsx'
+import InvestigacionTab from '../../molecules/InvestigacionTab'
 import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
 import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab'
 import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion';

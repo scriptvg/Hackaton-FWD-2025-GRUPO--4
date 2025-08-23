@@ -1,7 +1,7 @@
 import React from 'react'
 import QuienesSomos from '../../molecules/QuienesSomos'
 import ExhibitIntro from '@components/home/exhibiciones-y-servicios/components/ExhibitIntro'
-import TabsContainer from './components/TabsContainer'
+import TabsContainer from '../../atoms/TabsContainer'
 import DescriptionSection from './components/DescriptionSection'
 import Tanque from "@/assets/img/Logo_CRRAM.JPG"
 import { Link } from 'react-router-dom'
