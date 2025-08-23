@@ -1,16 +1,16 @@
 import React from 'react'
-import QuienesSomos from '../../molecules/QuienesSomos'
+import QuienesSomos from '../components/molecules/QuienesSomos'
 import ExhibitIntro from '@components/home/exhibiciones-y-servicios/components/ExhibitIntro'
-import TabsContainer from '../../atoms/TabsContainer'
-import DescriptionSection from './components/DescriptionSection'
+import TabsContainer from '../components/atoms/TabsContainer'
+import DescriptionSection from '../components/atoms/DescriptionSection'
 import Tanque from "@/assets/img/Logo_CRRAM.JPG"
 import { Link } from 'react-router-dom'
-import EspeciesTab from './components/tabs/EspeciesTab'
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab'
-import HistoriasTab from './components/tabs/HistoriasTab'
-import ComoAyudarTab from './components/tabs/ComoAyudarTab'
-import { publicaciones, publicacionesStats  } from './data/publicacionesCRRAMData';
-import TenenciaResponsableTab from './components/tabs/TenenciaResponsableTab'
+import EspeciesTab from '../components/molecules/EspeciesTab'
+import PublicacionesTab from '../components/molecules/PublicacionesTab'
+import HistoriasTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/HistoriasTab'
+import ComoAyudarTab from '../components/molecules/ComoAyudarTab'
+import { publicaciones, publicacionesStats  } from '../components/home/acuicultura-y-biotecnologia/data/publicacionesCRRAMData';
+import TenenciaResponsableTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/TenenciaResponsableTab'
 
 function CentroDeRescate() {
 

@@ -7,7 +7,7 @@ import { getTickets } from "@api/tickets";
 import EducationPrograms from "./components/EducationPrograms";
 /* import EducationalMaterials from './components/EducationalMaterials' */
 /* import materialsData from './data/materialsData' */
-import FeatureCard from "../../atoms/FeatureCardeCard";
+import FeatureCard from "../../atoms/FeatureCard";
 import { Link } from "react-router-dom";
 import { Calendar, Users, ShoppingCart, Fish, Award, BookOpen,} from "lucide-react";
 import { getServiciosEducativos } from "@api/servicesEducation";
@@ -49,7 +49,7 @@ function Servicios_Educativos() {
       <QuienesSomos
         title={"Servicios Educativos"}
         description={"Programas educativos para los jovenes"}
-        img={contaminacion}
+        img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1755983220/contaminacion_1_hfclrl.jpg"}
       />
       <ExhibitIntro
         description={

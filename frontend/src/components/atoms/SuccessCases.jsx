@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaRegUser } from "react-icons/fa";
 
 function SuccessCases() {
   const cases = [
@@ -30,7 +31,7 @@ function SuccessCases() {
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-400 text-xl">
                 {/* Imagen (si se desea personalizar) */}
-                <span>👤</span>
+                <span><FaRegUser /></span>
               </div>
               <div>
                 <h3 className="text-teal-600 font-semibold">{item.name}</h3>

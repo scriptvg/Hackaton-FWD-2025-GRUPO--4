@@ -1,25 +1,25 @@
 import React from 'react'
-import QuienesSomos from '../../molecules/QuienesSomos'
+import QuienesSomos from '../components/molecules/QuienesSomos'
 import Tanque from "@assets/img/fotos.verticales_(1).jpg"
-import AboutSection from '../../layouts/AboutSection'
-import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
-import OurApproach from './components/DescriptionSection'
-import TabsContainer from '../../atoms/TabsContainer'
-import SuccessCases from './components/SuccessCases'
-import CallToAction from './components/CallToAction'
-import CultivoTab from './components/tabs/CultivoTab'
-import TecnologiaTab from './components/tabs/TecnologiaTab'
-import ExtensionTab from './components/tabs/ExtensionTab'
-import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
+import AboutSection from '../components/layouts/AboutSection'
+import ExhibitIntro from '../components/home/exhibiciones-y-servicios/components/ExhibitIntro'
+import OurApproach from '../components/atoms/DescriptionSection'
+import TabsContainer from '../components/atoms/TabsContainer'
+import SuccessCases from '../components/atoms/SuccessCases'
+import CallToAction from '../components/atoms/CallToAction'
+import CultivoTab from '../components/molecules/CultivoTab'
+import TecnologiaTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/TecnologiaTab'
+import ExtensionTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/ExtensionTab'
+import ProyectosTab from '../components/molecules/ProyectosTab'
 import { Link } from 'react-router-dom'
-import InvestigationTabs from '../../molecules/InvestigacionTab'
+import InvestigationTabs from '../components/molecules/InvestigacionTab'
 /* import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion'; */
-import { proyectos } from './data/proyectosData.js';
-import { publicaciones, publicacionesStats  } from './data/publicacionesData.js';
-import { colaboradores, redes  } from './data/colaboradoresData.js';
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab';
-import ColaboracionesTab from '../../molecules/ColaboracionesTab';
-import GranjasTab from './components/tabs/GranjasTab.jsx'
+import { proyectos } from '../components/home/acuicultura-y-biotecnologia/data/proyectosData.js';
+import { publicaciones, publicacionesStats  } from '../components/home/acuicultura-y-biotecnologia/data/publicacionesData.js';
+import { colaboradores, redes  } from '../components/home/acuicultura-y-biotecnologia/data/colaboradoresData.js';
+import PublicacionesTab from '../components/molecules/PublicacionesTab';
+import ColaboracionesTab from '../components/molecules/ColaboracionesTab';
+import GranjasTab from '../components/molecules/GranjasTab.jsx'
 
 function AcuiculturaBiotecnologia() {
 

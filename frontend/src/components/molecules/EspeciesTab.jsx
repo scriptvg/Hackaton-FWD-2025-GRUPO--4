@@ -1,7 +1,7 @@
 // src/components/tabs/EspeciesTab.jsx
 
 import React, { useEffect, useState } from 'react';
-import {  estadisticas as estadisticasDefault } from '../../data/especiesData.js';
+import {  estadisticas as estadisticasDefault } from '../home/acuicultura-y-biotecnologia/data/especiesData.js';
 import { getSpecies } from '@api/species.js';
 
 export default function EspeciesTab({ stats = estadisticasDefault }) {

@@ -5,8 +5,8 @@ import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
 import TabsContainer from '../../atoms/TabsContainer'
 import ColaboracionesTab from '../../molecules/ColaboracionesTab.jsx'
 import InvestigacionTab from '../../molecules/InvestigacionTab'
-import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab'
+import ProyectosTab from '../../molecules/ProyectosTab'
+import PublicacionesTab from '../../molecules/PublicacionesTab'
 import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion';
 import { proyectos } from './data/proyectosData.js';
 import { publicaciones, publicacionesStats } from './data/publicacionesData.js';

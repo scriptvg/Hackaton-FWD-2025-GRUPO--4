@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getAnimals = async () => {
   try {
-    const response = await axiosInstance.get("/api/animals/");
+    const response = await axiosInstance.get("/api/wildlife/species/");
     return response.data;
   } catch (error) {
     console.error("Error al obtener animals:", error);
