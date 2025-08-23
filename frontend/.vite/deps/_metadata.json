@@ -1,0 +1,70 @@
+{
+  "hash": "b7446753",
+  "configHash": "f38f74a1",
+  "lockfileHash": "162e6ff1",
+  "browserHash": "ec397df2",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "eb551e5d",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "76a7d865",
+      "needsInterop": true
+    },
+    "js-cookie": {
+      "src": "../../node_modules/js-cookie/dist/js.cookie.mjs",
+      "file": "js-cookie.js",
+      "fileHash": "495b468f",
+      "needsInterop": false
+    },
+    "@radix-ui/themes": {
+      "src": "../../node_modules/@radix-ui/themes/dist/esm/index.js",
+      "file": "@radix-ui_themes.js",
+      "fileHash": "c9504d3e",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "843658e7",
+      "needsInterop": false
+    },
+    "react-toastify": {
+      "src": "../../node_modules/react-toastify/dist/index.mjs",
+      "file": "react-toastify.js",
+      "fileHash": "417119a5",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "b7d3019e",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "f3ef4d59",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-7BSC6AHG": {
+      "file": "chunk-7BSC6AHG.js"
+    },
+    "chunk-4XBZPZ4I": {
+      "file": "chunk-4XBZPZ4I.js"
+    },
+    "chunk-PG3TX57M": {
+      "file": "chunk-PG3TX57M.js"
+    },
+    "chunk-ILHRZGIS": {
+      "file": "chunk-ILHRZGIS.js"
+    }
+  }
+}

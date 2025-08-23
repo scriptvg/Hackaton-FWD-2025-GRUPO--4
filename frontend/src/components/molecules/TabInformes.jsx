@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, FileText } from "lucide-react";
+import { MapPin, FileText, ChevronDown } from "lucide-react";
 
 export default function TabInformes() {
   const [expanded, setExpanded] = useState(null);
@@ -59,27 +59,55 @@ export default function TabInformes() {
             Acceda a nuestros informes anuales, donde detallamos nuestras actividades, logros y desafíos.
           </p>
         </header>
+
         <div className="border-l-2 border-teal-500 pl-4 space-y-6">
-          {informes.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative cursor-pointer"
-              onClick={() => setExpanded(expanded === idx ? null : idx)}
-            >
-              <div className="absolute -left-[11px] top-1.5 w-3 h-3 rounded-full bg-teal-500" />
-              <span className="text-teal-600 text-sm font-semibold ml-3">
-                {item.mes} {item.año}
-              </span>
-              <h4 className="text-base font-bold text-gray-800 flex items-center gap-2">
-                <FileText size={16} /> {item.titulo}
-              </h4>
-              {expanded === idx && (
-                <p className="text-sm text-gray-600 mt-1 transition-all">
-                  {item.detalle}
-                </p>
-              )}
-            </div>
-          ))}
+          {informes.map((item, idx) => {
+            const isOpen = expanded === idx;
+            const controlId = `detalle-${idx}`;
+
+            return (
+              <button
+                key={idx}
+                type="button"
+                className="relative w-full text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+                onClick={() => setExpanded(isOpen ? null : idx)}
+                aria-expanded={isOpen}
+                aria-controls={controlId}
+              >
+                {/* Bullet */}
+                <div className="absolute -left-[11px] top-1.5 w-3 h-3 rounded-full bg-teal-500" />
+
+                {/* Texto + icono */}
+                <div className="ml-3 flex justify-between items-center">
+                  <div>
+                    <span className="text-teal-600 text-sm font-semibold">
+                      {item.mes} {item.año}
+                    </span>
+                    <h4 className="text-base font-bold text-gray-800 flex items-center gap-2">
+                      <FileText size={16} aria-hidden="true" /> {item.titulo}
+                    </h4>
+                  </div>
+                  <ChevronDown
+                    size={20}
+                    className={`text-gray-500 transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* Detalle expandible */}
+                {isOpen && (
+                  <p
+                    id={controlId}
+                    className="text-sm text-gray-600 mt-1 transition-all"
+                  >
+                    {item.detalle}
+                  </p>
+                )}
+              </button>
+            );
+          })}
         </div>
       </article>
 

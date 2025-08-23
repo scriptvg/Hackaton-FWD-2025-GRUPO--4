@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import QuienesSomos from '../quienes-somos/QuienesSomos'
+import QuienesSomos from '../../molecules/QuienesSomos'
 import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
 import placeholder from "@assets/placeholder.svg";
 import MarineExhibit from '../exhibiciones-y-servicios/components/MarineExhibit';

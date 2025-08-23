@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import QuienesSomos from '../quienes-somos/QuienesSomos'
+import QuienesSomos from '../../molecules/QuienesSomos'
 import Tanque from "@assets/img/Tanque.jpeg"
 import MarineExhibit from './components/MarineExhibit.jsx'
 import ExhibitIntro from './components/ExhibitIntro.jsx'

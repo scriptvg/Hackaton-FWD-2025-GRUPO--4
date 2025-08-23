@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholderImage from '@assets/img/_MG_0086.jpg';
+
 
 export default function AboutSection() {
   return (
@@ -24,7 +24,7 @@ export default function AboutSection() {
         <div>
           <div className="w-full h-50 sm:h-72 md:h-80 lg:h-full rounded-lg shadow-md bg-gray-100 flex items-center justify-center overflow-hidden">
             <img
-              src={placeholderImage}
+              src={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1755831571/_MG_0086_dwgrxs.jpg"}
               alt="Imagen Parque Marino"
               className="object-cover w-full h-[315px]"
             />

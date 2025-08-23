@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import QuienesSomos from "../quienes-somos/QuienesSomos";
+import QuienesSomos from "../../molecules/QuienesSomos";
 import contaminacion from "@assets/img/contaminacion_1.jpg";
 import ExhibitIntro from "./components/ExhibitIntro";
 import MarineExhibit from "./components/MarineExhibit";

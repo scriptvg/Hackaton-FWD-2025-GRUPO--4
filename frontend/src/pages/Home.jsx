@@ -11,7 +11,7 @@ import TestimonialsCarousel from "@components/organisms/TestimonialsCarousel";
 import EducationalServices from "@components/layouts/EducationalServices";
 import CallToAction from "@components/layouts/CallToAction";
 import ContactSection from "@components/layouts/ContacSection";
-import Newsletter from "@components/home/Newsletter";
+import Newsletter from "@components/atoms/Newsletter";
 
 const cardStyle =
   "bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between focus-within:ring-2 focus-within:ring-[#125E5C]";

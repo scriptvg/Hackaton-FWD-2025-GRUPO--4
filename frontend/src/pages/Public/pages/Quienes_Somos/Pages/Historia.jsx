@@ -1,6 +1,6 @@
 import React from 'react'
-import QuienesSomos from '@components/home/quienes-somos/QuienesSomos'
-import AboutSection from '@components/home/quienes-somos/AboutSection'
+import QuienesSomos from '@components/molecules/QuienesSomos'
+import AboutSection from '@components/layouts/AboutSection'
 
 function Historia() {
   return (

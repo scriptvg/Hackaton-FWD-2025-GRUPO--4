@@ -1,5 +1,5 @@
 import React from 'react'
-import QuienesSomos from '../quienes-somos/QuienesSomos'
+import QuienesSomos from '../../molecules/QuienesSomos'
 import ExhibitIntro from '@components/home/exhibiciones-y-servicios/components/ExhibitIntro'
 import TabsContainer from './components/TabsContainer'
 import DescriptionSection from './components/DescriptionSection'

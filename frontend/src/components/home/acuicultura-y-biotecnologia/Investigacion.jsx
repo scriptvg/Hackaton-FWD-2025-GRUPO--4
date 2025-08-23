@@ -1,5 +1,5 @@
 import React from 'react'
-import QuienesSomos from '../quienes-somos/QuienesSomos'
+import QuienesSomos from '../../molecules/QuienesSomos'
 import Tanque from "@assets/img/fotos.verticales_(1).jpg"
 import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
 import TabsContainer from './components/TabsContainer'
@@ -12,7 +12,7 @@ import { proyectos } from './data/proyectosData.js';
 import { publicaciones, publicacionesStats } from './data/publicacionesData.js';
 import { colaboradores, redes } from './data/colaboradoresData.js';
 import OportunidadesYCiencia from './components/OportunidadesYCiencia.jsx'
-import MissionCTA from '../quienes-somos/MissionCTA.jsx'
+import MissionCTA from '../../atoms/MissionCTA.jsx'
 
 
 
