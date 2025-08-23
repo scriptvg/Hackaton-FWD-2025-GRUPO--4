@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getProgramsEducation = async () => {
   try {
-    const response = await axiosInstance.get("/api/programas_educativos/");
+    const response = await axiosInstance.get("/api/education/programs");
     return response.data;
   } catch (error) {
     console.error("Error obtener servicios educativo:", error);
@@ -13,7 +13,7 @@ export const getProgramsEducation = async () => {
 export const getProgramsEducationById = async (id) => {
   try {
     const response = await axiosInstance.get(
-      `/api/programas_educativos/${id}/`
+      `/api/education/programs${id}/`
     );
     return response.data;
   } catch (error) {
@@ -25,7 +25,7 @@ export const getProgramsEducationById = async (id) => {
 export const createProgramsEducation = async (programsData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/programas_educativos/create/",
+      "/api/education/programs/create/",
       programsData
     );
     return response.data;
@@ -38,7 +38,7 @@ export const createProgramsEducation = async (programsData) => {
 export const updateProgramsEducation = async (id, programsData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/programas_educativos/${id}/update/`,
+      `/api/education/programs${id}/update/`,
       programsData
     );
     return response.data;
@@ -50,7 +50,7 @@ export const updateProgramsEducation = async (id, programsData) => {
 
 export const deleteProgramsEducation = async (id) => {
   try {
-    await axiosInstance.delete(`/api/programas_educativos/${id}/delete/`);
+    await axiosInstance.delete(`/api/education/programs${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminar programas educativos ID ${id}:`, error);
     throw error;
