@@ -7,7 +7,7 @@ function FeatureCard({ icon, title, description, onClick }) {
       className={`
         bg-gray-50 dark:bg-[var(--card)]
         rounded-lg p-6
-        border-2 border-gray-200/60 dark:border-gray-700/60
+        border-1  hover:dark:border-[#2AB5B0]
         shadow-[0_8px_30px_rgba(0,0,0,0.15)] dark:shadow-none
         hover:-translate-y-1.5 transition-all duration-300
         flex-1
@@ -22,12 +22,7 @@ function FeatureCard({ icon, title, description, onClick }) {
         {/* Icon container with custom color and accessible contrast */}
         {icon && (
           <div
-            className="
-              p-4 rounded-lg mb-4 border
-              bg-[#E6F4F4] dark:bg-[#0E3C3A]
-              text-[#125E5C] dark:text-[#A0F0EB]
-              border-[#B2DDDB] dark:border-[#234D4F]
-            "
+            className="rounded-lg mb-4"
             aria-hidden="true"
           >
             {icon}

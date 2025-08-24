@@ -2,6 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
+
 /**
  * Renders navigation buttons for a carousel with enhanced animations and accessibility.
  * Allows users to move to the previous or next slide.
@@ -42,7 +43,7 @@ function NavigationButtons({ instanceRef }) {
     hover: {
       opacity: 1,
       scale: 1.1,
-      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      backgroundColor: "rgb(42, 181, 176)",
       transition: {
         duration: 0.2
       }
@@ -91,7 +92,7 @@ function NavigationButtons({ instanceRef }) {
       {/* Previous slide button */}
       <motion.button
         onClick={() => instanceRef.current?.prev()}
-        className="absolute top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-sm z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+        className="absolute top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#2ab5b0]   z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#2ab5b0]"
         aria-label="Go to previous slide"
         type="button"
         variants={buttonVariants}
@@ -121,7 +122,7 @@ function NavigationButtons({ instanceRef }) {
       {/* Next slide button */}
       <motion.button
         onClick={() => instanceRef.current?.next()}
-        className="absolute top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-sm z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+        className="absolute top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#2ab5b0]    z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#2ab5b0]"
         aria-label="Go to next slide"
         type="button"
         variants={buttonVariants}

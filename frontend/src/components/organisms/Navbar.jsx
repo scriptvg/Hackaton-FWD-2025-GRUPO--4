@@ -85,10 +85,13 @@ export default function Navbar() {
   const dropdownItemVariants = { hidden: { opacity: 0, y: -5 }, visible: { opacity: 1, y: 0 } };
 
   return (
-    <nav className={`w-full fixed top-0 z-50 bg-background shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
-      <TopBarRedes />
+    <nav className={`w-full fixed top-0 pt-0 pb-0 z-50 bg-background dark:bg-[#222831] dark:text-[#F9FAFC] shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
+      {/* TopBarRedes sin padding superior */}
+      <div className="pt-0">
+        <TopBarRedes />
+      </div>
 
-      {/* Main navbar */}
+      {/* Main navbar - contenido centrado verticalmente */}
       <div className="mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo + texto */}
         <Link to="/" className="flex items-center gap-2 group" aria-label="Inicio">
@@ -100,11 +103,11 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           />
-          <div className="leading-tight flex flex-col">
-            <span className="text-base font-bold text-foreground uppercase tracking-wider group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+          <div className="leading-tight flex flex-col justify-center">
+            <span className="text-base font-bold text-foreground dark:text-[#fff] uppercase tracking-wider group-hover:text-teal-600 dark:group-hover:text-[#2FC8C2] transition-colors">
               PARQUE MARINO
             </span>
-            <span className="text-xs text-muted-foreground group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+            <span className="text-xs text-muted-foreground dark:text-[#fff] group-hover:text-[#2FC8C2] dark:group-hover:text-teal-400 transition-colors">
               DEL PACÍFICO
             </span>
           </div>
@@ -130,7 +133,7 @@ export default function Navbar() {
                     <motion.span animate={{ rotate: dropdownOpen === index ? 180 : 0 }} transition={{ duration: 0.2 }}>
                       <ChevronDownIcon className="w-4 h-4" />
                     </motion.span>
-                    <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 dark:bg-teal-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
+                    <span className="absolute left-3 right-3 bottom-0 h-0.5 bg-teal-500 dark:bg-[#fff] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-300 rounded-full" />
                   </button>
                   <AnimatePresence>
                     {dropdownOpen === index && (
@@ -169,18 +172,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Botones Donar / Ticketera / User */}
-        <div className="hidden md:flex items-center gap-4 self-center">
+        {/* Botones Donar / Ticketera / User - centrados verticalmente */}
+        <div className="hidden md:flex items-center gap-4">
           <Link
             to={DonarLink.href}
-            className="bg-teal-500 dark:bg-teal-600 hover:bg-teal-600 dark:hover:bg-teal-700 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
+            className="bg-teal-500 hover:bg-teal-600 dark:hover:bg-teal-400 text-[#202020] font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
             <BiDonateHeart className="w-4 h-4" />
             {DonarLink.name}
           </Link>
           <Link
             to={ticketLink.href}
-            className="bg-orange-500 dark:bg-orange-600 hover:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
+            className="bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-400 text-[#030303] font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
             <Ticket className="w-4 h-4" />
             {ticketLink.name}

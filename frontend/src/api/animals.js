@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getAnimals = async () => {
   try {
-    const response = await axiosInstance.get(`/api/wildlife/species/${id}/animals/`);
+    const response = await axiosInstance.get(`api/wildlife/species/${id}/animals/`);
     return response.data;
   } catch (error) {
     console.error("Error al obtener animals:", error);
@@ -12,7 +12,7 @@ export const getAnimals = async () => {
 
 export const getAnimalById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/wildlife/species/${id}/animals/`);
+    const response = await axiosInstance.get(`api/wildlife/species/${id}/animals/`);
     return response.data;
   } catch (error) {
     console.error(`Error al obtener animal con ID ${id}:`, error);
@@ -23,7 +23,7 @@ export const getAnimalById = async (id) => {
 export const createAnimal = async (animalData) => {
   try {
     const response = await axiosInstance.post(
-      `api/wildlife/species/${id}/animals/create/`,
+      `api/animals/create/`,
       animalData
     );
     return response.data;
@@ -36,7 +36,7 @@ export const createAnimal = async (animalData) => {
 export const updateAnimal = async (id, animalData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/wildlife/species/${id}/animals/update/`,
+      `api/wildlife/species/${id}/animals/update/`,
       animalData
     );
     return response.data;
@@ -48,7 +48,7 @@ export const updateAnimal = async (id, animalData) => {
 
 export const deleteAnimal = async (id) => {
   try {
-    await axiosInstance.delete(`/api/wildlife/species/${id}/animals/${id}/delete/`);
+    await axiosInstance.delete(`api/wildlife/species/${id}/animals/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando animal con ID ${id}:`, error);
     throw error;

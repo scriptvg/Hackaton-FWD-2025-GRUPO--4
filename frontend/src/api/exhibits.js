@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getExhibits = async () => {
   try {
-    const response = await axiosInstance.get("/api/exhibitions/");
+    const response = await axiosInstance.get("/api/exhibiciones/");
     return response.data;
   } catch (error) {
     console.error("Error fetching exhibits:", error);
@@ -12,7 +12,7 @@ export const getExhibits = async () => {
 
 export const getExhibitById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/exhibitions/${id}/`);
+    const response = await axiosInstance.get(`/api/exhibiciones/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching exhibit with ID ${id}:`, error);
@@ -23,7 +23,7 @@ export const getExhibitById = async (id) => {
 export const createExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/",
+      "/api/exhibiciones/create/",
       exhibitData
     );
     return response.data;
@@ -36,7 +36,7 @@ export const createExhibit = async (exhibitData) => {
 export const updateExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/${id}/update/`,
+      `/api/exhibiciones/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -48,7 +48,7 @@ export const updateExhibit = async (id, exhibitData) => {
 
 export const deleteExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/${id}/delete/`);
+    await axiosInstance.delete(`/api/exhibiciones/${id}/delete/`);
   } catch (error) {
     console.error(`Error deleting exhibit with ID ${id}:`, error);
     throw error;
@@ -60,7 +60,7 @@ export const deleteExhibit = async (id) => {
 
 export const getImageExhibit = async () => {
   try {
-    const response = await axiosInstance.get('/api/exhibitions/images/');
+    const response = await axiosInstance.get('/api/exhibiciones/imagenes/');
     return response.data
   } catch (error) {
     console.error(`Error obteniendo la imagen`)
@@ -69,7 +69,7 @@ export const getImageExhibit = async () => {
 
 export const getImageExhibitById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/exhibitions/${id}/images/`);
+    const response = await axiosInstance.get(`/api/exhibiciones/imagenes/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching exhibit with ID ${id}:`, error);
@@ -80,7 +80,7 @@ export const getImageExhibitById = async (id) => {
 export const createImageExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/images/",
+      "/api/exhibiciones/imagenes/create/",
       exhibitData
     );
     return response.data;
@@ -93,7 +93,7 @@ export const createImageExhibit = async (exhibitData) => {
 export const updateImageExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/images/${id}/update/`,
+      `/api/exhibiciones/image/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -105,7 +105,7 @@ export const updateImageExhibit = async (id, exhibitData) => {
 
 export const deleteImageExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/images/${id}/delete/`);
+    await axiosInstance.delete(`/api/exhibiciones/imagenes/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando imagen con ID ${id}:`, error);
     throw error;
@@ -118,7 +118,7 @@ export const deleteImageExhibit = async (id) => {
 
 export const getFactsExhibit = async () => {
   try {
-    const response = await axiosInstance.get('/api/exhibitions/facts/');
+    const response = await axiosInstance.get('/api/exhibiciones/facts/');
     return response.data
   } catch (error) {
     console.error(`Error obteniendo facts`)
@@ -127,7 +127,7 @@ export const getFactsExhibit = async () => {
 
 export const getFactsExhibitById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/exhibitions/facts/${id}/`);
+    const response = await axiosInstance.get(`/api/exhibiciones/facts/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obteniendo facts con ID ${id}:`, error);
@@ -138,7 +138,7 @@ export const getFactsExhibitById = async (id) => {
 export const createFactsExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/facts/create/",
+      "/api/exhibiciones/facts/create/",
       exhibitData
     );
     return response.data;
@@ -151,7 +151,7 @@ export const createFactsExhibit = async (exhibitData) => {
 export const updateFactsExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/facts/${id}/update/`,
+      `/api/exhibiciones/facts/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -163,7 +163,7 @@ export const updateFactsExhibit = async (id, exhibitData) => {
 
 export const deleteFactsExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/facts//${id}/delete/`);
+    await axiosInstance.delete(`/api/exhibiciones/facts/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando facts con ID ${id}:`, error);
     throw error;

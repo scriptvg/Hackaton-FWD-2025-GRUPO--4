@@ -29,9 +29,9 @@ function Home() {
   return (
     <main
       className="
-        bg-white dark:bg-[var(--background)]
-        text-gray-900 dark:text-[var(--foreground)]
-        transition-colors duration-300
+        bg-white dark:bg-[#212832]
+        text-gray-900 dark:text-[F9FAFC]
+        transition-colors duration-100
       "
     >
       {/* Hero carousel with emotional and visual impact */}
@@ -48,13 +48,13 @@ function Home() {
       >
         {/* Horario */}
         <FeatureCard
-          icon={<Calendar className="w-6 h-6 text-[#125E5C]" />}
+          icon={<Calendar className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
           title="Horario"
           description={
             <div className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
-              <p className="font-semibold text-[#125E5C]">Martes a Domingo</p>
-              <p className="text-base font-medium">9:00am - 4:30pm</p>
-              <p className="text-xs font-semibold text-[#A20B13] mt-2">
+              <p className="font-semibold text-[#0D5E58] dark:text-[#2FC8C2]">Martes a Domingo</p>
+              <p className="text-base font-medium text:[202020]">9:00am - 4:30pm</p>
+              <p className="text-xs font-semibold text-[#0D5E58] dark:text-[#FF6900] mt-2">
                 Cerrado los Lunes
               </p>
             </div>
@@ -64,7 +64,7 @@ function Home() {
 
         {/* Tarifas */}
         <FeatureCard
-          icon={<Users className="w-6 h-6 text-[#125E5C]" />}
+          icon={<Users className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
           title="Tarifas"
           description={
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
@@ -96,7 +96,7 @@ function Home() {
 
         {/* Compra de entradas */}
         <FeatureCard
-          icon={<ShoppingCart className="w-6 h-6 text-[#125E5C]" />}
+          icon={<ShoppingCart className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
           title="Compra de Entradas"
           description={
             <div className="flex flex-col h-full justify-between">
@@ -108,9 +108,9 @@ function Home() {
                 className="
                   mt-auto block w-full text-center
                   bg-[#1CB6B0] hover:bg-[#139a95]
-                  dark:bg-[var(--primary)] dark:hover:bg-[var(--primary-foreground)]
-                  text-white dark:text-white
-                  py-2 px-4 rounded-md
+                  dark:bg-[#1CB6B0] dark:hover:bg-teal-400
+                  text-white dark:text-[#202020]
+                  py-2 px-4 rounded-md font-semibold
                   transition-colors duration-200
                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#125E5C]
                   dark:focus-within:ring-offset-[var(--background)]
