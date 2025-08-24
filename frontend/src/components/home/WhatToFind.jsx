@@ -11,10 +11,10 @@ import placeholder from "@assets/placeholder.svg";
 
 // Puedes ajustar este mapeo según los datos que recibas de la API
 const iconMap = {
-  reptil: <Turtle className="text-[#1CB6B0] w-8 h-8 mb-2" />,
-  isla: <Globe className="text-[#1CB6B0] w-8 h-8 mb-2" />,
-  tiburon: <Fish className="text-[#1CB6B0] w-8 h-8 mb-2" />,
-  default: <BookOpen className="text-[#1CB6B0] w-8 h-8 mb-2" />,
+  reptil: <Turtle className="text-[#0D5E58] dark:text-[#202020] w-8 h-8 mb-2" />,
+  isla: <Globe className="text-[#0D5E58] dark:text-[#202020] w-8 h-8 mb-2" />,
+  tiburon: <Fish className="text-[#0D5E58] dark:text-[#202020] w-8 h-8 mb-2" />,
+  default: <BookOpen className="text-[#0D5E58] dark:text-[#202020] w-8 h-8 mb-2" />,
 };
 
 export default function WhatToFindCarousel() {
@@ -94,10 +94,10 @@ export default function WhatToFindCarousel() {
                   />
                   <div className="p-5 mb-4">
                     {iconMap[item.icon] || iconMap.default}
-                    <h3 className="text-[#1CB6B0] font-bold text-lg mb-1">
+                    <h3 className="text-[#0D5E58] dark:text-[#202020] font-bold text-lg mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-[#0D5E58] dark:text-[#202020] text-sm mb-4">
                       {item.description}
                     </p>
                     {item.links &&
@@ -106,7 +106,7 @@ export default function WhatToFindCarousel() {
                         <Link
                           key={linkIndex}
                           to={link.link}
-                          className="bg-[#1CB6B0] text-white text-sm px-4 py-2 rounded-md hover:bg-[#139a95] transition font-medium"
+                          className="bg-[#0D5E58] dark:bg-[#FF6900] text-white text-sm px-4 py-2 rounded-md hover:bg-[#139a95] transition font-medium"
                         >
                           {link.title}
                         </Link>
@@ -122,13 +122,13 @@ export default function WhatToFindCarousel() {
         <div className="flex justify-center gap-4 mt-6">
           <button
             ref={prevRef}
-            className="w-10 h-10 rounded-full border flex items-center justify-center text-gray-500 hover:bg-gray-100"
+            className="w-10 h-10 rounded-full border flex items-center justify-center text-gray-500 dark:bg-[#FF6900] hover:bg-gray-100"
           >
             ←
           </button>
           <button
             ref={nextRef}
-            className="w-10 h-10 rounded-full border flex items-center justify-center text-gray-500 hover:bg-gray-100"
+            className="w-10 h-10 rounded-full border flex items-center justify-center dark:bg-[#FF6900]  hover:bg-gray-100"
           >
             →
           </button>

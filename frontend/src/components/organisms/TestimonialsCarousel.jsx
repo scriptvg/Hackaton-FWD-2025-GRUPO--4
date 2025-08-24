@@ -163,6 +163,7 @@ export default function TestimonialsCarousel() {
                 aria-valuenow={Math.round(p * 100)}
                 aria-valuemin={0}
                 aria-valuemax={100}
+                aria-label="Carga completada al 59%"
                 className="relative w-4 h-4 rounded-full bg-[#1CB6B0]/30 dark:bg-[#1CB6B0]/20 overflow-hidden"
               >
                 <div

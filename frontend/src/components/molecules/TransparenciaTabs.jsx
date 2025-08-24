@@ -120,6 +120,7 @@ export default function TabFinanzas() {
                   aria-valuenow={value}
                   aria-valuemin={0}
                   aria-valuemax={100}
+                  aria-label="Carga completada al 59%"
                   role="progressbar"
                 />
               </div>
