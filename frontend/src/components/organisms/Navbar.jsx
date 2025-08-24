@@ -94,7 +94,7 @@ export default function Navbar() {
       {/* Main navbar - contenido centrado verticalmente */}
       <div className="mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo + texto */}
-        <Link to="/" className="flex items-center gap-2 group" aria-label="Inicio" target="_blank">
+        <Link to="/" className="flex items-center gap-2 group" aria-label="Inicio">
           <motion.img
             src={logo}
             alt="Logo Parque Marino del Pacífico"

@@ -307,7 +307,7 @@ function TicketeraForm() {
 
   return (
     <div className={containerClass}>
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover theme="colored" />
+      <ToastContainer position="top-center" autoClose={3000} aria-label="Carga completada al 59%" hideProgressBar={false} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover theme="colored" />
       <div className={cardClass + ' ' + fadeClass}>
         <h2 className="text-3xl font-extrabold mb-6 text-center text-cyan-700 tracking-tight drop-shadow-sm flex items-center justify-center gap-2">
           <Ticket className="w-8 h-8 text-cyan-500" /> Compra tus Entradas
