@@ -9,7 +9,7 @@ import PublicacionesTab from '../components/molecules/PublicacionesTab'
 import HistoriasTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/HistoriasTab'
 import ComoAyudarTab from '../components/molecules/ComoAyudarTab'
 import { publicaciones, publicacionesStats  } from '../components/home/acuicultura-y-biotecnologia/data/publicacionesCRRAMData';
-import TenenciaResponsableTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/TenenciaResponsableTab'
+import TenenciaResponsableTab from '../components/molecules/TenenciaResponsableTab'
 
 function CentroDeRescate() {
 

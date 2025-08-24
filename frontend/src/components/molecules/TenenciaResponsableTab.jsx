@@ -1,6 +1,6 @@
 import React from "react";
-import { tenencias } from "../../../../data/tenenciasData";
-import Tenencia_responsable from "../../../../layouts/Tenencia_responsable";
+import { tenencias } from "../data/tenenciasData";
+import Tenencia_responsable from "../layouts/Tenencia_responsable";
 
 export default function TenenciaResponsableTab() {
   return (
