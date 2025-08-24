@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getPurchaseOrders = async () => {
   try {
-    const response = await axiosInstance.get("/api/purchase-orders/");
+    const response = await axiosInstance.get("/api/purchase_orders/");
     return response.data;
   } catch (error) {
     console.error("Error obtener purchase orders:", error);
@@ -12,7 +12,7 @@ export const getPurchaseOrders = async () => {
 
 export const getPurchaseOrderById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/purchase-orders/${id}/`);
+    const response = await axiosInstance.get(`/api/purchase_orders/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obtener purchase order with ID ${id}:`, error);
@@ -23,7 +23,7 @@ export const getPurchaseOrderById = async (id) => {
 export const createPurchaseOrder = async (orderData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/purchase-orders/create/",
+      "/api/purchase_orders/create/",
       orderData
     );
     return response.data;
@@ -36,7 +36,7 @@ export const createPurchaseOrder = async (orderData) => {
 export const updatePurchaseOrder = async (id, orderData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/purchase-orders/${id}/update/`,
+      `/api/purchase_orders/${id}/update/`,
       orderData
     );
     return response.data;
@@ -48,7 +48,7 @@ export const updatePurchaseOrder = async (id, orderData) => {
 
 export const deletePurchaseOrder = async (id) => {
   try {
-    await axiosInstance.delete(`/api/purchase-orders/${id}/delete/`);
+    await axiosInstance.delete(`/api/purchase_orders/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminar purchase order con ID ${id}:`, error);
     throw error;
