@@ -38,13 +38,13 @@ export default function ContactSection() {
         <h2
           className="
             text-3xl md:text-4xl font-extrabold text-center uppercase
-            text-gray-900 dark:text-[var(--foreground)]
+            text-[#202020] dark:text-[#F9FAFC]
           "
         >
           Ubicación y Contacto
         </h2>
         <div className="w-20 h-1 bg-[#1CB6B0] mx-auto my-4 rounded" />
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-10">
+        <p className="text-center text-[#202020] dark:text-[#F9FAFC] mb-10">
           Visítanos y descubre la maravilla de la biodiversidad marina de Costa Rica
         </p>
 
@@ -71,41 +71,41 @@ export default function ContactSection() {
               />
             </div>
 
-            <div className="space-y-5 text-gray-800 dark:text-[var(--foreground)]">
+            <div className="space-y-5 text-gray-800 dark:text-[#F9FAFC]">
               <div className="flex items-start gap-3">
-                <MapPin className="text-[#1CB6B0] w-5 h-5 mt-1" />
+                <MapPin className="dark:text-[#FF6900]  text-[#0D5E58] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                  <h4 className="font-bold text-lg text-[#202020] dark:text-[#F9FAFC]">
                     Ubicación
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-[#202020] dark:text-[#F9FAFC]">
                     Puntarenas, Costa Rica
                   </p>
-                  <p className="text-sm text-gray-400 dark:text-gray-500">
+                  <p className="text-sm text-[#202020] dark:text-[#F9FAFC]">
                     A 100 metros del muelle principal
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="text-[#1CB6B0] w-5 h-5 mt-1" />
+                <Phone className="dark:text-[#FF6900]  text-[#0D5E58] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                  <h4 className="font-bold text-[#202020] text-lg dark:text-[#F9FAFC]">
                     Teléfono
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-[#202020] dark:text-[#F9FAFC]">
                     +506 2661-5270
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail className="text-[#1CB6B0] w-5 h-5 mt-1" />
+                <Mail className="dark:text-[#FF6900]  text-[#0D5E58] w-5 h-5 mt-1" />
                 <div>
-                  <h4 className="font-bold text-lg dark:text-[var(--foreground)]">
+                  <h4 className="font-bold text-lg text-[#202020] dark:text-[#F9FAFC]">
                     Correo Electrónico
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-[#202020] dark:text-[#F9FAFC]">
                     info@parquemarino.co.cr
                   </p>
                 </div>
@@ -117,12 +117,11 @@ export default function ContactSection() {
           <div
             className="
               bg-white dark:bg-[var(--card)]
-              border border-gray-100 dark:border-gray-700
               shadow-xl dark:shadow-none
               rounded-2xl p-8 transition-colors duration-300
             "
           >
-            <h3 className="flex items-center gap-2 text-[#1CB6B0] text-xl font-bold mb-6">
+            <h3 className="flex items-center gap-2 text-[#0D5E58] dark:text-[#FF6900] text-xl font-bold mb-6">
               <Mail className="w-5 h-5" aria-hidden="true" /> Envíanos un Mensaje
             </h3>
 
@@ -148,7 +147,7 @@ export default function ContactSection() {
                   <div key={id}>
                     <label
                       htmlFor={id}
-                      className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                      className="block text-sm font-medium text-[#0D5E58] dark:text-[#F9FAFC] mb-1"
                     >
                       {label}
                     </label>
@@ -159,11 +158,10 @@ export default function ContactSection() {
                       required
                       className="
                         w-full px-4 py-3
-                        border border-gray-300 dark:border-gray-600
                         rounded-md shadow-sm
-                        bg-white dark:bg-[var(--input)]
-                        text-gray-700 dark:text-gray-200
-                        focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                        bg-white dark:bg-[#F9FAFC]
+                        text-[#0D5E58] dark:text-white
+                        focus:outline-none focus:ring-2 focus:ring-[#0D5E58]
                         transition-colors duration-300
                         text-sm
                       "
@@ -176,7 +174,7 @@ export default function ContactSection() {
               <div>
                 <label
                   htmlFor="asunto"
-                  className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                  className="block text-sm font-medium text-[#0D5E58] dark:text-[var(--foreground)] mb-1"
                 >
                   Asunto
                 </label>
@@ -187,11 +185,10 @@ export default function ContactSection() {
                   required
                   className="
                     w-full px-4 py-3
-                    border border-gray-300 dark:border-gray-600
                     rounded-md shadow-sm
-                    bg-white dark:bg-[var(--input)]
-                    text-gray-700 dark:text-gray-200
-                    focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                    bg-white dark:bg-[#F9FAFC]
+                    text-[#0D5E58] dark:text-gray-200
+                    focus:outline-none focus:ring-2 focus:ring-[#0D5E58]
                     transition-colors duration-300
                     text-sm
                   "
@@ -202,7 +199,7 @@ export default function ContactSection() {
               <div>
                 <label
                   htmlFor="mensaje"
-                  className="block text-sm font-medium text-gray-700 dark:text-[var(--foreground)] mb-1"
+                  className="block text-sm font-medium text-[#0D5E58] dark:text-[#F9FAFC] mb-1"
                 >
                   Mensaje
                 </label>
@@ -213,11 +210,10 @@ export default function ContactSection() {
                   required
                   className="
                     w-full px-4 py-3
-                    border border-gray-300 dark:border-gray-600
                     rounded-md shadow-sm
-                    bg-white dark:bg-[var(--input)]
-                    text-gray-700 dark:text-gray-200
-                    focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+                    bg-white dark:bg-[#F9FAFC]
+                    text-[#0D5E58] dark:text-gray-200
+                    focus:outline-none focus:ring-2 focus:ring-[#0D5E58]
                     transition-colors duration-300
                     text-sm resize-none
                   "
@@ -229,12 +225,12 @@ export default function ContactSection() {
                 type="submit"
                 className="
                   w-full
-                  bg-[#1CB6B0] hover:bg-[#139a95]
-                  dark:bg-[var(--primary)] dark:hover:bg-[var(--primary-foreground)]
+                  bg-[#FF6900] hover:bg-orange-700
+                  dark:bg-[#FF6900] dark:text-[#FF6900] dark:hover:bg-orange-400 dark:hover:text-[#FF6900]
                   text-white font-semibold py-3 rounded-md
                   flex items-center justify-center gap-2
                   transition-colors duration-200
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0]
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0D5E58]
                 "
                 aria-label="Enviar mensaje"
               >

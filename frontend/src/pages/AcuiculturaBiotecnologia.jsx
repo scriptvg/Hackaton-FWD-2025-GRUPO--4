@@ -1,6 +1,5 @@
 import React from 'react'
 import QuienesSomos from '../components/molecules/QuienesSomos'
-import Tanque from "@assets/img/fotos.verticales_(1).jpg"
 import AboutSection from '../components/layouts/AboutSection'
 import ExhibitIntro from '../components/home/exhibiciones-y-servicios/components/ExhibitIntro'
 import OurApproach from '../components/atoms/DescriptionSection'
@@ -77,10 +76,10 @@ function AcuiculturaBiotecnologia() {
 
   return (
     <div className='flex flex-col items-center mt-23'>
-      <QuienesSomos title={"Acuicultura y Biotecnologia"} description={"Descubre la biodiversidad de Costa Rica "} img={Tanque} />
+      <QuienesSomos title={"Acuicultura y Biotecnologia"} description={"Descubre la biodiversidad de Costa Rica "} img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} />
       <ExhibitIntro description={"El Parque Marino del Pacífico cuenta con un Laboratorio de Acuicultura y Biotecnología Marina (LABM) que es fundamental para su misión de sostenibilidad de los recursos marino-costeros. Este laboratorio no es solo un espacio de investigación, sino que tiene un fuerte componente de extensión y transferencia tecnológica hacia las comunidades costeras de Costa Rica."} title={"Programa de Acuicultura y Biotecnología"} />
       <div className=''>
-        <OurApproach title={"Nuestro Enfoque"} paragraphs={paragraphs} imageSrc={Tanque} workAreasTitle={"Áreas de Trabajo:"} workAreas={workAreas} buttonText={"Conocer más"} onButtonClick={handleButtonClick} imageAlt={"Img del programa"}  />
+        <OurApproach title={"Nuestro Enfoque"} paragraphs={paragraphs} imageSrc={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} workAreasTitle={"Áreas de Trabajo:"} workAreas={workAreas} buttonText={"Conocer más"} onButtonClick={handleButtonClick} imageAlt={"Img del programa"}  />
       
       
         <TabsContainer tabs={acuiculturaTabs} defaultValue="cultivo" />

@@ -94,7 +94,7 @@ export default function Navbar() {
       {/* Main navbar - contenido centrado verticalmente */}
       <div className="mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo + texto */}
-        <Link to="/" className="flex items-center gap-2 group" aria-label="Inicio">
+        <Link to="/" className="flex items-center gap-2 group" aria-label="Inicio" target="_blank">
           <motion.img
             src={logo}
             alt="Logo Parque Marino del Pacífico"
@@ -147,6 +147,7 @@ export default function Navbar() {
                         {link.sublinks.map((sublink) => (
                           <motion.div key={sublink.href} variants={dropdownItemVariants}>
                             <Link
+                              target="_blank"
                               to={sublink.href}
                               className="block px-5 py-2 text-sm text-popover-foreground hover:bg-accent hover:text-accent-foreground rounded-md"
                               onClick={() => setDropdownOpen(null)}
@@ -162,6 +163,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to={link.href}
+                  target="_blank"
                   className="text-foreground font-medium transition-all relative py-2 px-3"
                 >
                   {link.name}
@@ -175,13 +177,15 @@ export default function Navbar() {
         {/* Botones Donar / Ticketera / User - centrados verticalmente */}
         <div className="hidden md:flex items-center gap-4">
           <Link
+            target="_blank"
             to={DonarLink.href}
-            className="bg-teal-500 hover:bg-teal-600 dark:hover:bg-teal-400 text-[#202020] font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
+            className="bg-[#2ab5b0] hover:bg-teal-600 dark:hover:bg-teal-400 text-[#202020] font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
             <BiDonateHeart className="w-4 h-4" />
             {DonarLink.name}
           </Link>
           <Link
+            target="_blank"
             to={ticketLink.href}
             className="bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-400 text-[#030303] font-semibold text-sm px-4 py-2 rounded-xl shadow-lg flex items-center gap-2"
           >
@@ -206,7 +210,7 @@ export default function Navbar() {
                       <p className="text-sm font-medium text-foreground">{user.name}</p>
                       <p className="text-xs text-muted-foreground">{user.email}</p>
                     </div>
-                    <Link to="/perfil" className="flex items-center px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground">
+                    <Link target="_blank" to="/perfil" className="flex items-center px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground">
                       <User className="w-4 h-4 mr-2" />
                       Mi Perfil
                     </Link>
@@ -272,6 +276,7 @@ export default function Navbar() {
                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="pl-4">
                           {link.sublinks.map((sublink) => (
                             <Link
+                              target="_blank"
                               key={sublink.href}
                               to={sublink.href}
                               className="block py-2 px-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md"
@@ -287,6 +292,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={link.href}
+                    target="_blank"
                     className="block py-3 px-2 text-foreground font-medium hover:text-teal-700 dark:hover:text-teal-400 hover:bg-accent rounded-lg"
                     onClick={() => setIsOpen(false)}
                   >
@@ -296,11 +302,11 @@ export default function Navbar() {
               </motion.div>
             ))}
             <div className="pt-4 border-t border-border space-y-3">
-              <Link to={DonarLink.href} className="flex items-center justify-center gap-2 bg-teal-500 dark:bg-teal-600 hover:bg-teal-600 dark:hover:bg-teal-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
+              <Link  target="_blank" to={DonarLink.href} className="flex items-center justify-center gap-2 bg-teal-500 dark:bg-teal-600 hover:bg-teal-600 dark:hover:bg-teal-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
                 <BiDonateHeart className="w-5 h-5" />
                 {DonarLink.name}
               </Link>
-              <Link to={ticketLink.href} className="flex items-center justify-center gap-2 bg-orange-500 dark:bg-orange-600 hover:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
+              <Link  target="_blank" to={ticketLink.href} className="flex items-center justify-center gap-2 bg-orange-500 dark:bg-orange-600 hover:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold py-3 rounded-lg" onClick={() => setIsOpen(false)}>
                 <Ticket className="w-5 h-5" />
                 {ticketLink.name}
               </Link>

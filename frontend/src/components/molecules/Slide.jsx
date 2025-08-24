@@ -104,13 +104,13 @@ function Slide({ img, isActive }) {
 
   return (
     <div className="keen-slider__slide relative h-full w-full overflow-hidden">
-      {/* Contenedor de imagen con filtro de oscurecimiento */}
+      {/* Contenedor de imagen con filtro de oscurecimiento aumentado */}
       <div className="relative h-full w-full">
-        {/* Imagen de fondo con animación de zoom sutil y filtro de oscurecimiento */}
+        {/* Imagen de fondo con mayor oscurecimiento */}
         <motion.img
           src={img.src}
           alt={img.alt || img.title}
-          className="w-full h-full object-cover brightness-75" // Filtro de oscurecimiento
+          className="w-full h-full object-cover brightness-50" // Filtro de oscurecimiento aumentado (50% de brillo)
           loading="lazy"
           aria-hidden={!isActive}
           variants={imageVariants}
@@ -130,7 +130,7 @@ function Slide({ img, isActive }) {
             exit="hidden"
           >
             <motion.div 
-              className="w-full bg-gradient-to-b from-black/40 via-black/30 to-black/70 pt-8 pb-10 px-4 md:px-6"
+              className="w-full bg-gradient-to-b from-black/50 via-black/40 to-black/80 pt-8 pb-10 px-4 md:px-6"
               variants={contentVariants}
               initial="hidden"
               animate="visible"
@@ -164,8 +164,9 @@ function Slide({ img, isActive }) {
                       whileTap="tap"
                     >
                       <Link
+                        target="_blank"
                         to={img.cta.link}
-                        className="inline-block px-5 py-2 md:px-6 md:py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white text-sm md:text-base drop-shadow-lg"
+                        className="inline-block px-5 py-2 md:px-6 md:py-3 bg-[#FF6900] text-[#202020] font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white text-sm md:text-base drop-shadow-lg"
                         aria-label={img.cta.label}
                       >
                         {img.cta.label}

@@ -4,18 +4,18 @@ export default function Newsletter() {
   return (
     <section
       aria-labelledby="newsletter-heading"
-      className="bg-[#1CB6B0] py-16 px-6"
+      className="bg-[#FF6900] py-16 px-6"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left text block */}
         <div className="text-white max-w-xl">
           <h2
             id="newsletter-heading"
-            className="text-2xl md:text-3xl font-bold text-gray-900"
+            className="text-2xl md:text-3xl font-bold text-[#202020]"
           >
             Mantente Informado
           </h2>
-          <p className="mt-2 text-white">
+          <p className="mt-2 font-semibold text-[#202020]">
             Suscríbete a nuestro boletín para recibir noticias, eventos y
             novedades del Parque Marino.
           </p>
@@ -40,7 +40,7 @@ export default function Newsletter() {
             required
             autoComplete="email"
             placeholder="Tu correo electrónico"
-            className="w-full px-4 py-2 rounded-md border border-white text-white placeholder-white bg-transparent focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full px-4 py-2 rounded-md border border-[#202020] text-[#202020] placeholder-[#202020] bg-transparent focus:outline-none focus:ring-2 focus:ring-white"
             aria-required="true"
             aria-invalid="false"
           />

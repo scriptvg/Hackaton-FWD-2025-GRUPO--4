@@ -7,7 +7,7 @@ function FeatureCard({ icon, title, description, onClick }) {
       className={`
         bg-gray-50 dark:bg-[var(--card)]
         rounded-lg p-6
-        border-1  hover:dark:border-[#2AB5B0]
+        border-1  hover:border-[#2AB5B0] 
         shadow-[0_8px_30px_rgba(0,0,0,0.15)] dark:shadow-none
         hover:-translate-y-1.5 transition-all duration-300
         flex-1
@@ -31,10 +31,10 @@ function FeatureCard({ icon, title, description, onClick }) {
 
         {/* Title and description */}
         <div className="w-full">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-[var(--foreground)] mb-2.5">
+          <h3 className="text-lg font-semibold text-[#202020] dark:text-[var(--foreground)] mb-2.5">
             {title}
           </h3>
-          <div className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
+          <div className="text-[#202020] dark:text-gray-400 space-y-2 text-sm">
             {description}
           </div>
         </div>

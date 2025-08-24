@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getConservationStatuses = async () => {
   try {
-    const response = await axiosInstance.get("/api/wildlife/conservation-status/");
+    const response = await axiosInstance.get("api/conservation_status/");
     return response.data;
   } catch (error) {
     console.error("Error obtener conservation status:", error);
@@ -12,7 +12,7 @@ export const getConservationStatuses = async () => {
 
 export const getConservationStatusById = async (id) => {
   try {
-    const response = await axiosInstance.get(`a/api/wildlife/conservation-status/${id}/`);
+    const response = await axiosInstance.get(`api/conservation_status/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obtener conservation status con ID ${id}:`, error);
@@ -23,7 +23,7 @@ export const getConservationStatusById = async (id) => {
 export const createConservationStatus = async (statusData) => {
   try {
     const response = await axiosInstance.post(
-      "api/wildlife/conservation-status/create/",
+      "api/conservation_status/create/",
       statusData
     );
     return response.data;
@@ -36,7 +36,7 @@ export const createConservationStatus = async (statusData) => {
 export const updateConservationStatus = async (id, statusData) => {
   try {
     const response = await axiosInstance.put(
-      `api/wildlife/conservation-status/${id}/update/`,
+      `api/conservation_status/${id}/update/`,
       statusData
     );
     return response.data;
@@ -48,7 +48,7 @@ export const updateConservationStatus = async (id, statusData) => {
 
 export const deleteConservationStatus = async (id) => {
   try {
-    await axiosInstance.delete(`api/wildlife/conservation-status/${id}/delete/`);
+    await axiosInstance.delete(`api/conservation_status/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminar conservation status con ID ${id}:`, error);
     throw error;
@@ -58,7 +58,7 @@ export const deleteConservationStatus = async (id) => {
 export const getConservationStatusChoices = async () => {
   try {
     const response = await axiosInstance.get(
-      "api/wildlife/conservation-status/"
+      "api/conservation-status-choices/"
     );
     return response.data;
   } catch (error) {

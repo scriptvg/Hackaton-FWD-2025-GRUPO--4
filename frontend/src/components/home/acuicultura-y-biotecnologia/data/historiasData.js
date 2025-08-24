@@ -1,10 +1,5 @@
 // src/data/historiasData.js
 
-import lunaImg from '../../../../assets/placeholder.svg';
-import Moa from '../../../../assets/img/Moana_Ei17/IMG_20170808_145752.jpg'
-import Rome from '../../../../assets/img/Romelia_Lo62/IMG_9401.JPG'
-import Care from '../../../../assets/img/Carey_Ei56/pro-L7kipeIW.jpeg'
-
 
 
 export const historias = [
@@ -19,7 +14,7 @@ export const historias = [
       'Hierro',
       'Suero'
     ],
-    img: Moa
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024515/IMG_20170808_145752_lhmino.jpg"
   },
   { 
     nombre: 'Caso Romelia CRR-191115Lo62',
@@ -33,7 +28,7 @@ export const historias = [
       'Hierro',
       'Suero'
     ],
-    img: Rome
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024588/IMG_9401_xbrc70.jpg"
   },
   { 
     nombre: 'Caso Tortuga Carey CRR-290125Ei56',
@@ -44,6 +39,6 @@ export const historias = [
       'Antibióticos',
       'Hierro',
     ],
-    img: Care
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024638/pro-L7kipeIW_ifk1uo.jpg"
   }
 ];

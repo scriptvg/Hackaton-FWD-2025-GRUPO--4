@@ -36,7 +36,7 @@ export const createExhibit = async (exhibitData) => {
 export const updateExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/${id}/`,
+      `/api/exhibiciones/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -48,12 +48,15 @@ export const updateExhibit = async (id, exhibitData) => {
 
 export const deleteExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/${id}/`);
+    await axiosInstance.delete(`/api/exhibiciones/${id}/delete/`);
   } catch (error) {
     console.error(`Error deleting exhibit with ID ${id}:`, error);
     throw error;
   }
 };
+
+
+
 
 export const getImageExhibit = async () => {
   try {
@@ -90,7 +93,7 @@ export const createImageExhibit = async (exhibitData) => {
 export const updateImageExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/images/${id}/`,
+      `/api/exhibiciones/image/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -102,12 +105,16 @@ export const updateImageExhibit = async (id, exhibitData) => {
 
 export const deleteImageExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/images/${id}/`);
+    await axiosInstance.delete(`/api/exhibiciones/imagenes/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando imagen con ID ${id}:`, error);
     throw error;
   }
 };
+
+
+
+
 
 export const getFactsExhibit = async () => {
   try {
@@ -131,7 +138,7 @@ export const getFactsExhibitById = async (id) => {
 export const createFactsExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/facts/",
+      "/api/exhibiciones/facts/create/",
       exhibitData
     );
     return response.data;
@@ -144,7 +151,7 @@ export const createFactsExhibit = async (exhibitData) => {
 export const updateFactsExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/facts/${id}/`,
+      `/api/exhibiciones/facts/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -156,16 +163,20 @@ export const updateFactsExhibit = async (id, exhibitData) => {
 
 export const deleteFactsExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/facts/${id}/`);
+    await axiosInstance.delete(`/api/exhibiciones/facts/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando facts con ID ${id}:`, error);
     throw error;
   }
 };
 
+
+
+
+
 export const getDescriptionExhibit = async () => {
   try {
-    const response = await axiosInstance.get('/api/exhibitions/descriptions/');
+    const response = await axiosInstance.get('/api/exhibiciones/description/');
     return response.data
   } catch (error) {
     console.error(`Error obteniendo description`)
@@ -174,7 +185,7 @@ export const getDescriptionExhibit = async () => {
 
 export const getDescriptionExhibitById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/exhibitions/descriptions/${id}/`);
+    const response = await axiosInstance.get(`/api/exhibiciones/description/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obteniendo description con ID ${id}:`, error);
@@ -185,7 +196,7 @@ export const getDescriptionExhibitById = async (id) => {
 export const createDescriptionExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/descriptions/",
+      "/api/exhibiciones/description/create/",
       exhibitData
     );
     return response.data;
@@ -198,7 +209,7 @@ export const createDescriptionExhibit = async (exhibitData) => {
 export const updateDescriptionExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/descriptions/${id}/`,
+      `/api/exhibiciones/description/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -210,16 +221,22 @@ export const updateDescriptionExhibit = async (id, exhibitData) => {
 
 export const deleteDescriptionExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/descriptions/${id}/`);
+    await axiosInstance.delete(`/api/exhibiciones/description/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando description con ID ${id}:`, error);
     throw error;
   }
 };
 
+
+
+
+
+
+
 export const getButtonsExhibit = async () => {
   try {
-    const response = await axiosInstance.get('/api/exhibitions/buttons/');
+    const response = await axiosInstance.get('/api/exhibiciones/buttons/');
     return response.data
   } catch (error) {
     console.error(`Error obteniendo buttons`)
@@ -228,7 +245,7 @@ export const getButtonsExhibit = async () => {
 
 export const getButtonsExhibitById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/exhibitions/buttons/${id}/`);
+    const response = await axiosInstance.get(`/api/exhibiciones/buttons/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obteniendo buttons con ID ${id}:`, error);
@@ -239,7 +256,7 @@ export const getButtonsExhibitById = async (id) => {
 export const createButtonsExhibit = async (exhibitData) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exhibitions/buttons/",
+      "/api/exhibiciones/buttons/create/",
       exhibitData
     );
     return response.data;
@@ -252,7 +269,7 @@ export const createButtonsExhibit = async (exhibitData) => {
 export const updateButtonsExhibit = async (id, exhibitData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/exhibitions/buttons/${id}/`,
+      `/api/exhibiciones/buttons/${id}/update/`,
       exhibitData
     );
     return response.data;
@@ -264,12 +281,18 @@ export const updateButtonsExhibit = async (id, exhibitData) => {
 
 export const deleteButtonsExhibit = async (id) => {
   try {
-    await axiosInstance.delete(`/api/exhibitions/buttons/${id}/`);
+    await axiosInstance.delete(`/api/exhibiciones/buttons/${id}/delete/`);
   } catch (error) {
     console.error(`Error eliminando buttons con ID ${id}:`, error);
     throw error;
   }
 };
+
+
+
+
+
+
 
 export default {
   getExhibits,
@@ -294,7 +317,5 @@ export default {
   deleteDescriptionExhibit,
   getButtonsExhibit,
   getButtonsExhibitById,
-  createButtonsExhibit,
-  updateButtonsExhibit,
-  deleteButtonsExhibit
+  
 };

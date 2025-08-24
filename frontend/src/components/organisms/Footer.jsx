@@ -44,12 +44,12 @@ export default function Footer() {
       role="contentinfo"
       aria-label="Pie de página del Parque Marino"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-[#1CB6B0]/30 pb-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-[#F9FAFC] pb-10">
         {/* Branding and mission */}
         <div>
           <div className="flex items-center gap-3 mb-5">
             <div
-              className="bg-[#1CB6B0] rounded-full w-14 h-14 flex items-center justify-center"
+              className="bg-[#202020] rounded-full w-14 h-14 flex items-center justify-center"
               aria-hidden="true"
             >
               <img
@@ -64,7 +64,7 @@ export default function Footer() {
               Parque Marino
             </h4>
           </div>
-          <p className="text-sm text-gray-300 mb-5 leading-relaxed">
+          <p className="text-sm text-[#F9FAFC] mb-5 leading-relaxed">
             Conservamos la biodiversidad marina de Costa Rica mediante
             educación, investigación y conservación.
           </p>
@@ -89,10 +89,10 @@ export default function Footer() {
 
         {/* Quick links */}
         <div>
-          <h5 className="text-lg font-semibold mb-4 border-b border-[#1CB6B0] pb-1 w-fit">
+          <h5 className="text-lg font-semibold mb-4 border-b border-[#F9FAFC] pb-1 w-fit">
             Enlaces rápidos
           </h5>
-          <ul className="space-y-2 text-sm text-gray-200">
+          <ul className="space-y-2 text-sm text-[#F9FAFC]">
             {[
               ["Exhibiciones", "/exhibiciones-y-servicios/exhibiciones"],
               [
@@ -107,6 +107,7 @@ export default function Footer() {
             ].map(([label, href]) => (
               <li key={href}>
                 <Link
+                  target="_blank"
                   to={href}
                   className="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-white"
                 >
@@ -119,12 +120,12 @@ export default function Footer() {
 
         {/* Opening hours */}
         <div>
-          <h5 className="text-lg font-semibold mb-4 border-b border-[#1CB6B0] pb-1 w-fit">
+          <h5 className="text-lg font-semibold mb-4 border-b border-[#F9FAFC] pb-1 w-fit">
             Horario
           </h5>
-          <ul className="text-sm text-gray-200 space-y-1">
+          <ul className="text-sm text-[#F9FAFC] space-y-1">
             {[
-              ["Lunes", "Cerrado", "text-red-400"],
+              ["Lunes", "Cerrado", "text-[#F9FAFC]"],
               ["Martes - Viernes", "9:00 - 16:30"],
               ["Sábado - Domingo", "9:00 - 16:30"],
               ["Feriados", "Consultar"],
@@ -139,20 +140,20 @@ export default function Footer() {
 
         {/* Contact information */}
         <div>
-          <h5 className="text-lg font-semibold mb-4 border-b border-[#1CB6B0] pb-1 w-fit">
+          <h5 className="text-lg font-semibold mb-4 border-b border-[#F9FAFC] pb-1 w-fit">
             Contacto
           </h5>
-          <ul className="text-sm text-gray-200 space-y-3">
+          <ul className="text-sm text-[#F9FAFC] space-y-3">
             <li className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 mt-1 text-[#1CB6B0]" />
+              <MapPin className="w-4 h-4 mt-1 text-[#F9FAFC]" />
               <span>Puntarenas, Costa Rica</span>
             </li>
             <li className="flex items-start gap-3">
-              <Phone className="w-4 h-4 mt-1 text-[#1CB6B0]" />
+              <Phone className="w-4 h-4 mt-1 text-[#F9FAFC]" />
               <span>+506 2661-5270</span>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="w-4 h-4 mt-1 text-[#1CB6B0]" />
+              <Mail className="w-4 h-4 mt-1 text-[#F9FAFC]" />
               <a
                 href="mailto:info@parquemarino.org"
                 className="hover:underline focus:outline-none focus:ring-2 focus:ring-white"
@@ -165,7 +166,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom footer */}
-      <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+      <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-[#F9FAFC] gap-4">
         <p className="text-center md:text-left">
           &copy; {new Date().getFullYear()} Parque Marino del Pacífico Central.
           Todos los derechos reservados.
@@ -174,12 +175,14 @@ export default function Footer() {
           <Link
             to="/privacidad/politica-de-privicidad"
             className="hover:underline focus:outline-none focus:ring-2 focus:ring-white"
+            target="_blank"
           >
             Política de Privacidad
           </Link>
           <Link
             to="/terminos-y-condiciones/terminos"
             className="hover:underline focus:outline-none focus:ring-2 focus:ring-white"
+            target="_blank"
           >
             Términos y Condiciones
           </Link>

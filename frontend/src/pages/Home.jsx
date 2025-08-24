@@ -48,12 +48,12 @@ function Home() {
       >
         {/* Horario */}
         <FeatureCard
-          icon={<Calendar className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
+          icon={<Calendar className="w-6 h-6 text-[#0D5E58] dark:text-[#FF6900]" />}
           title="Horario"
           description={
             <div className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
               <p className="font-semibold text-[#0D5E58] dark:text-[#2FC8C2]">Martes a Domingo</p>
-              <p className="text-base font-medium text:[202020]">9:00am - 4:30pm</p>
+              <p className="text-base font-medium text-[#202020] dark:text-[#F9FAFC]">9:00am - 4:30pm</p>
               <p className="text-xs font-semibold text-[#0D5E58] dark:text-[#FF6900] mt-2">
                 Cerrado los Lunes
               </p>
@@ -64,10 +64,10 @@ function Home() {
 
         {/* Tarifas */}
         <FeatureCard
-          icon={<Users className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
+          icon={<Users className="w-6 h-6 text-[#0D5E58] dark:text-[#FF6900]" />}
           title="Tarifas"
           description={
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-sm text-[#202020] dark:text-gray-300">
               {[
                 ["Adultos", "₡2900"],
                 ["Niños (4-11)", "₡1600"],
@@ -76,8 +76,8 @@ function Home() {
                 ["Extranjeros niños (4-11)", "$5"],
               ].map(([label, price], index) => (
                 <li key={index} className="flex justify-between">
-                  <span className="font-medium">{label}</span>
-                  <span className="text-gray-800 dark:text-gray-100 font-semibold">
+                  <span className="font-medium text-[#202020] dark:text-[#F9FAFC]">{label}</span>
+                  <span className="text-[#202020] dark:text-[#F9FAFC] font-semibold">
                     {price}
                   </span>
                 </li>
@@ -85,7 +85,7 @@ function Home() {
             </ul>
           }
           className="
-            bg-white dark:bg-[var(--card)]
+            bg-white text-[#202020] dark:bg-[var(--card)] 
             rounded-xl border border-gray-200 dark:border-gray-700
             shadow-md dark:shadow-none p-6 hover:shadow-lg
             transition-all duration-300
@@ -96,11 +96,11 @@ function Home() {
 
         {/* Compra de entradas */}
         <FeatureCard
-          icon={<ShoppingCart className="w-6 h-6 text-[#125E5C] dark:text-[#FF6900]" />}
+          icon={<ShoppingCart className="w-6 h-6 text-[#0D5E58] dark:text-[#FF6900]" />}
           title="Compra de Entradas"
           description={
             <div className="flex flex-col h-full justify-between">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 font-medium">
+              <p className="text-sm text-[#202020] dark:text-[#F9FAFC] mb-4 font-medium">
                 Adquiere tus entradas en línea y evita filas
               </p>
               <Link
@@ -109,7 +109,7 @@ function Home() {
                   mt-auto block w-full text-center
                   bg-[#1CB6B0] hover:bg-[#139a95]
                   dark:bg-[#1CB6B0] dark:hover:bg-teal-400
-                  text-white dark:text-[#202020]
+                  text-[#202020]
                   py-2 px-4 rounded-md font-semibold
                   transition-colors duration-200
                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#125E5C]

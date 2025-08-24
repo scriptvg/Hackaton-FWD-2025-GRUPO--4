@@ -42,14 +42,14 @@ export default function WhatToFindCarousel() {
   console.log(exhibits);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-[#202020]">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Título */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 uppercase mb-2">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#202020] dark:text-[#F9FAFC] uppercase mb-2">
           Qué podrás encontrar
         </h2>
         <div className="w-24 h-1 bg-[#1CB6B0] mx-auto my-4 rounded"></div>
-        <p className="text-gray-600 max-w-xl mx-auto mb-10">
+        <p className="text-[#202020] dark:text-[#F9FAFC]  max-w-xl mx-auto mb-10">
           Descubre la increíble biodiversidad marina de Costa Rica a través de
           nuestras exhibiciones interactivas y educativas
         </p>

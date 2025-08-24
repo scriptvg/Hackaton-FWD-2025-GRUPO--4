@@ -2,7 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const getHabitats = async () => {
   try {
-    const response = await axiosInstance.get("/api/infrastructure/habitats/");
+    const response = await axiosInstance.get("/api/habitats/");
     return response.data;
   } catch (error) {
     console.error("Error obtener habitats:", error);
@@ -12,7 +12,7 @@ export const getHabitats = async () => {
 
 export const getHabitatById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/api/infrastructure/habitats/${id}/`);
+    const response = await axiosInstance.get(`/api/habitats/${id}/`);
     return response.data;
   } catch (error) {
     console.error(`Error obtener habitat por ID ${id}:`, error);
@@ -22,7 +22,7 @@ export const getHabitatById = async (id) => {
 
 export const createHabitat = async (habitatData) => {
   try {
-    const response = await axiosInstance.post("/api/infrastructure/habitats/", habitatData);
+    const response = await axiosInstance.post("/api/habitats/", habitatData);
     return response.data;
   } catch (error) {
     console.error("Error crear habitat:", error);
@@ -33,7 +33,7 @@ export const createHabitat = async (habitatData) => {
 export const updateHabitat = async (id, habitatData) => {
   try {
     const response = await axiosInstance.put(
-      `/api/infrastructure/habitats/${id}/`,
+      `/api/habitats/${id}/`,
       habitatData
     );
     return response.data;
@@ -45,7 +45,7 @@ export const updateHabitat = async (id, habitatData) => {
 
 export const deleteHabitat = async (id) => {
   try {
-    await axiosInstance.delete(`/api/infrastructure/habitats/${id}/`);
+    await axiosInstance.delete(`/api/habitats/${id}/`);
   } catch (error) {
     console.error(`Error eliminar habitat con ID ${id}:`, error);
     throw error;

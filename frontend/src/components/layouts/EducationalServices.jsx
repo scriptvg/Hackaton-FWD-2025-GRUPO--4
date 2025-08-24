@@ -1,33 +1,32 @@
 import placeholder from "@assets/placeholder.svg";
-import visitas from "@assets/img/monitoreo.jpg";
-import charla from "@assets/img/pul.jpg";
-import taller from "@assets/img/massi.jpg";
+
+
 import { Link } from "react-router-dom";
 
 // Educational services data
 const services = [
   {
-    img: visitas,
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025231/monitoreo_szfver.jpg",
     title: "Visitas Guiadas",
     description: "Recorridos educativos con guías especializados en biología marina.",
     tag: "Popular",
-    tagColor: "bg-[#1CB6B0] text-white",
+    tagColor: "bg-[#1CB6B0] text-[#202020]",
     action: "Reservar",
     detail: "Desde ₡3500",
   },
   {
-    img: charla,
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756027090/pul_xts88s.jpg",
     title: "Charlas Educativas",
     description: "Presentaciones sobre conservación marina y biodiversidad.",
     action: "Más Info",
     detail: "Grupos escolares",
   },
   {
-    img: taller,
+    img: "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025316/massi_cnvx2s.jpg",
     title: "Talleres",
     description: "Actividades prácticas sobre biología marina y conservación.",
     tag: "Nuevo",
-    tagColor: "bg-yellow-500 text-white",
+    tagColor: "bg-[#FF6900] text-[#202020]",
     action: "Inscribirse",
     detail: "Todas las edades",
   },
@@ -41,18 +40,18 @@ export default function EducationalServices() {
       className="
         py-20 px-4
         bg-white dark:bg-[var(--background)]
-        text-center text-gray-900 dark:text-[var(--foreground)]
-        transition-colors duration-300
+        text-center text-[#202020] 
+        transition-colors duration-100
       "
     >
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase
-                       text-gray-900 dark:text-[var(--foreground)]">
+                       text-[#202020]  dark:text-[#F9FAFC]">
           Descubre nuestros servicios educativos
         </h2>
         <div className="w-24 h-1 bg-[#1CB6B0] mx-auto my-4 rounded"></div>
-        <p className="text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto">
+        <p className="text-[#202020]  dark:text-[#F9FAFC] mb-12 max-w-xl mx-auto">
           Programas diseñados para todas las edades que promueven la educación ambiental y la conservación marina
         </p>
 
@@ -64,7 +63,7 @@ export default function EducationalServices() {
               className="
                 group rounded-xl overflow-hidden
                 bg-white dark:bg-[var(--card)]
-                border border-gray-200 dark:border-gray-700
+                dark:border-gray-700
                 shadow-sm dark:shadow-none
                 hover:shadow-lg transition duration-300
                 focus-within:ring-2 focus-within:ring-[#1CB6B0]
@@ -92,27 +91,24 @@ export default function EducationalServices() {
 
               {/* Contenido textual */}
               <div className="p-6 space-y-3 text-left">
-                <h3 className="text-lg font-bold text-[#1CB6B0] tracking-tight">
+                <h3 className="text-lg font-bold text-[#0D5E58] dark:text-[#2FC8C2] tracking-tight">
                   {s.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-gray-600 dark:text-[#F9FAFC] leading-relaxed">
                   {s.description}
                 </p>
 
                 <div className="flex items-center justify-between mt-4">
                   <button
-                    className="
-                      bg-[#1CB6B0] hover:bg-[#139a95]
-                      text-white text-sm px-4 py-2 rounded-md font-medium
-                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1CB6B0]
-                      transition-colors duration-200
-                    "
+                    className="bg-[#2FC8C2] hover:bg-[#139a95] dark:text-[#202020] text-sm px-4 py-2 rounded-xl font-medium
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2FC8C2]
+                      transition-colors duration-100"
                     aria-label={`Acción: ${s.action} para ${s.title}`}
                   >
                     {s.action}
                   </button>
                   <span className="text-sm font-semibold
-                                   text-gray-700 dark:text-gray-400">
+                                   text-gray-700 dark:text-[#F9FAFC]">
                     {s.detail}
                   </span>
                 </div>
@@ -125,14 +121,15 @@ export default function EducationalServices() {
         <div className="mt-12">
           <Link
             to="/exhibiciones-y-servicios/servicios-educativos"
+            target="_blank"
             className="
               inline-flex items-center gap-2 px-6 py-2 text-sm font-medium
-              border border-[#1CB6B0] rounded-md
-              text-[#1CB6B0] hover:bg-[#e6f7f6]
-              dark:border-[var(--primary)] dark:text-[var(--primary)]
-              dark:hover:bg-[var(--card)]
+              border-2 border-[#0D5E58] rounded-lg
+              text-[#0D5E58] hover:bg-[#0D5E58] hover:text-white
+              dark:border-[#2FC8C2] dark:text-[#F9FAFC]
+              dark:hover:bg-[#2FC8C2] dark:hover:text-[#202020]
               transition-colors duration-200
-              focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+              focus:outline-none focus:ring-2 focus:ring-[#0D5E58]
             "
             aria-label="Ver todos los servicios educativos"
           >

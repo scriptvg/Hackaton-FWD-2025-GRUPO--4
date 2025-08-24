@@ -45,8 +45,8 @@ export default function TestimonialsCarousel() {
       role="region"
       aria-label="Testimonios de visitantes"
       className="
-        bg-[#f8f9fa] dark:bg-[var(--background)]
-        text-gray-900 dark:text-[var(--foreground)]
+        bg-[#f8f9fa] dark:bg-[#202020]
+        text-[#202020] dark:text-[#F9FAFC]
         py-20 px-4
       "
     >
@@ -56,7 +56,7 @@ export default function TestimonialsCarousel() {
           Lo que dicen nuestros visitantes
         </h2>
         <div className="w-20 h-1 bg-[#1CB6B0] mx-auto my-4 rounded"></div>
-        <p className="text-gray-600 dark:text-gray-400 mb-10">
+        <p className="text-[#202020]0 dark:text-[#F9FAFC] mb-10">
           Experiencias de quienes han disfrutado del Parque Marino
         </p>
 
@@ -80,7 +80,7 @@ export default function TestimonialsCarousel() {
             >
               <Quote
                 aria-hidden="true"
-                className="w-12 h-12 text-[#bdecee] dark:text-[#4e94a1] mb-6"
+                className="w-12 h-12 text-[#2FC8C2] dark:text-[#1CB6B0] mb-6"
               />
 
               <img
@@ -90,13 +90,13 @@ export default function TestimonialsCarousel() {
                 loading="lazy"
               />
 
-              <p className="italic text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
+              <p className="italic text-[#202020] dark:text-[#F9FAFC] mb-6 max-w-xl">
                 {item.text}
               </p>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-[#202020] dark:text-[#F9FAFC]">
                 {item.name}
               </h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
+              <p className="text-[#202020] dark:text-[#F9FAFC] text-sm">
                 {item.role}
               </p>
 
@@ -109,7 +109,7 @@ export default function TestimonialsCarousel() {
                   <span
                     key={i}
                     className={`
-                      text-yellow-400 text-xl
+                      text-[#FF6900] text-xl
                       ${i < item.rating ? "" : "opacity-30"}
                     `}
                   >
@@ -126,14 +126,15 @@ export default function TestimonialsCarousel() {
             aria-label="Testimonio anterior"
             className="
               absolute left-4 top-1/2 transform -translate-y-1/2
-              bg-white dark:bg-[var(--card)] shadow-md
+              bg-[#202020]  dark:bg-[#2FC8C2] shadow-md
               w-10 h-10 rounded-full flex items-center justify-center
               focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+              dark:focus:ring-[#2FC8C2] 
             "
           >
             <ChevronLeft
               aria-hidden="true"
-              className="w-5 h-5 text-gray-700 dark:text-gray-400"
+              className="w-5 h-5  text-white dark:text-[#202020]"
             />
           </button>
           <button
@@ -141,14 +142,15 @@ export default function TestimonialsCarousel() {
             aria-label="Siguiente testimonio"
             className="
               absolute right-4 top-1/2 transform -translate-y-1/2
-              bg-white dark:bg-[var(--card)] shadow-md
+              bg-[#202020] dark:bg-[#2FC8C2] shadow-md
               w-10 h-10 rounded-full flex items-center justify-center
               focus:outline-none focus:ring-2 focus:ring-[#1CB6B0]
+              dark:focus:ring-[#2FC8C2]
             "
           >
             <ChevronRight
               aria-hidden="true"
-              className="w-5 h-5 text-gray-700 dark:text-gray-400"
+              className="w-5 h-5 text-white dark:text-[#202020]"
             />
           </button>
 
