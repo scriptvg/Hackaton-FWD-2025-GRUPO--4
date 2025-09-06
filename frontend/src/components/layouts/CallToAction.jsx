@@ -6,7 +6,7 @@ export default function CallToAction() {
     <section
       role="region"
       aria-labelledby="cta-title"
-      className="bg-[#1CB6B0] text-white text-center py-16 px-4 rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-white"
+      className="bg-[#0D5E58] text-white text-center py-16 px-4 rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-white"
     >
       {/* Título principal con semántica accesible */}
       <h2
@@ -32,7 +32,7 @@ export default function CallToAction() {
           to="/apoyo/donaciones"
           role="button"
           aria-label="Hacer una donación para conservar los océanos"
-          className="bg-white text-[#1CB6B0] font-semibold px-6 py-3 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="bg-white text-[#0D5E58] font-semibold px-6 py-3 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           Hacer una Donación
         </Link>
@@ -41,7 +41,7 @@ export default function CallToAction() {
           to="/apoyo/voluntariado"
           role="button"
           aria-label="Unirse como voluntario en la conservación marina"
-          className="border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-[#1CB6B0] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-[#0D5E58] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           Ser Voluntario
         </Link>

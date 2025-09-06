@@ -1,12 +1,11 @@
 import React from 'react'
 import QuienesSomos from '../../molecules/QuienesSomos'
-import Tanque from "@assets/img/fotos.verticales_(1).jpg"
 import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
-import TabsContainer from './components/TabsContainer'
-import ColaboracionesTab from './components/tabs/investigacion/ColaboracionesTab.jsx'
-import InvestigacionTab from './components/tabs/investigacion/InvestigacionTab'
-import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab'
+import TabsContainer from '../../atoms/TabsContainer'
+import ColaboracionesTab from '../../molecules/ColaboracionesTab.jsx'
+import InvestigacionTab from '../../molecules/InvestigacionTab'
+import ProyectosTab from '../../molecules/ProyectosTab'
+import PublicacionesTab from '../../molecules/PublicacionesTab'
 import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion';
 import { proyectos } from './data/proyectosData.js';
 import { publicaciones, publicacionesStats } from './data/publicacionesData.js';
@@ -32,7 +31,7 @@ function Investigacion() {
     {
       value: "area-investigacion",
       label: "Areas de investigacion",
-      component: <InvestigacionTab lineas={lineasDeInvestigacion} areas={areas} image={Tanque} />
+      component: <InvestigacionTab lineas={lineasDeInvestigacion} areas={areas} image={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} />
     },
     {
       value: "proyectos-actuales",
@@ -53,7 +52,7 @@ function Investigacion() {
 
   return (
     <div className='mt-23'>
-      <QuienesSomos title={"Investigación"} description={"Generando conocimiento para la conservación marina"} img={Tanque} />
+      <QuienesSomos title={"Investigación"} description={"Generando conocimiento para la conservación marina"} img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} />
 
       <ExhibitIntro title={"Nuestro Programa de Investigación"} description={"El Parque Marino del Pacífico en Puntarenas, Costa Rica, no es solo un acuario o un centro de exhibición; es una institución dedicada a la investigación aplicada, la conservación y el desarrollo sostenible de los recursos marinos y costeros."} />
 

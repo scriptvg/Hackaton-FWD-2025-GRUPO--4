@@ -1,5 +1,5 @@
 import React from 'react'
-import AcuiculturaBiotecnologia from '@components/home/acuicultura-y-biotecnologia/AcuiculturaBiotecnologia'
+import AcuiculturaBiotecnologia from '@pages/AcuiculturaBiotecnologia'
 
 function AcuiculturaYBiotecnologiaMarina() {
   return (

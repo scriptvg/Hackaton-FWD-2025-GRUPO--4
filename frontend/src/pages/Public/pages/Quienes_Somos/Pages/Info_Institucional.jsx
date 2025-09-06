@@ -1,8 +1,8 @@
 import React from 'react'
 import QuienesSomos from '@components/molecules/QuienesSomos'
 import AboutSection from '@components/layouts/AboutSection'
-import TeamMembers from '@components/home/quienes-somos/TeamMembers'
-import Valores from '@components/home/quienes-somos/Valores'
+import TeamMembers from '@components/atoms/TeamMembers'
+import Valores from '@components/atoms/Valores'
 import MissionCTA from '@components/atoms/MissionCTA'
 import { links, textos } from '@components/data/misionData'
 

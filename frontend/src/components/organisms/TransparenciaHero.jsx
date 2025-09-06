@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function TransparenciaHero({
   title = "Transparencia",
   subtitle = "Comprometidos con la rendición de cuentas y la gestión responsable",
@@ -51,7 +52,7 @@ export default function TransparenciaHero({
               key={i}
               className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md hover:shadow-lg transition"
             >
-              <div className="text-3xl mb-2">{card.icon || "📄"}</div>
+              <div className="text-3xl mb-2 flex justify-center items-center">{card.icon || "📄"}</div>
               <h3 className="text-lg font-bold mb-1">{card.title}</h3>
               <p className="text-sm text-gray-700">{card.description}</p>
             </div>

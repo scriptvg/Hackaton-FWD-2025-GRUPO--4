@@ -1,16 +1,15 @@
 import React from 'react'
-import QuienesSomos from '../../molecules/QuienesSomos'
+import QuienesSomos from '../components/molecules/QuienesSomos'
 import ExhibitIntro from '@components/home/exhibiciones-y-servicios/components/ExhibitIntro'
-import TabsContainer from './components/TabsContainer'
-import DescriptionSection from './components/DescriptionSection'
-import Tanque from "@/assets/img/Logo_CRRAM.JPG"
+import TabsContainer from '../components/atoms/TabsContainer'
+import DescriptionSection from '../components/atoms/DescriptionSection'
 import { Link } from 'react-router-dom'
-import EspeciesTab from './components/tabs/EspeciesTab'
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab'
-import HistoriasTab from './components/tabs/HistoriasTab'
-import ComoAyudarTab from './components/tabs/ComoAyudarTab'
-import { publicaciones, publicacionesStats  } from './data/publicacionesCRRAMData';
-import TenenciaResponsableTab from './components/tabs/TenenciaResponsableTab'
+import EspeciesTab from '../components/molecules/EspeciesTab'
+import PublicacionesTab from '../components/molecules/PublicacionesTab'
+import HistoriasTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/HistoriasTab'
+import ComoAyudarTab from '../components/molecules/ComoAyudarTab'
+import { publicaciones, publicacionesStats  } from '../components/home/acuicultura-y-biotecnologia/data/publicacionesCRRAMData';
+import TenenciaResponsableTab from '../components/molecules/TenenciaResponsableTab'
 
 function CentroDeRescate() {
 
@@ -61,7 +60,7 @@ function CentroDeRescate() {
 
       <ExhibitIntro description={"El CRRAM inició gracias a donaciones de Florida Bebidas y Pesquera Cannavo de Venezuela, y al apoyo de Fundación CRUSA, construyéndose una pequeña instalación para albergar tortugas marinas.  El centro de rescate se encuentra debidamente inscrito ante el SINAC cumpliendo así con la normativa vigente, por lo cual se cuenta con un regente, biólogos de planta y un veterinario."} title={"Programa Centro de Rescate y Rehabilitación"} />
 
-      <DescriptionSection imageSrc={Tanque} title={"Nuestra misión"} paragraphs={["El objetivo de este centro de rescate es rehabilitar mediante un manejo biológico y veterinario los animales que ingresan a este centro y poder coordinar su posible liberación al medio silvestre. En el Parque se procura la liberación de toda tortuga marina, ave o cocodrilo excepto para el caso de aquellos que no se puedan valer por sí mismos, como es el caso de los pelícanos totalmente inhabilitados para volar, o del caso de dos tortugas marinas que por sus condiciones fisiológicas como la pérdida de sus aletas no es posible su liberación. Estos animales residentes juegan un papel muy importante de educación en los visitantes que llegan al Parque Marino del Pacífico.",]} workAreasTitle={"Nuestros Servicios:"} workAreas={workAreas} buttonText={"Reportar Animal en peligro"} onButtonClick={handleButtonClick} />
+      <DescriptionSection imageSrc={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756028171/Logo_CRRAM_hvgg9x.jpg"} title={"Nuestra misión"} paragraphs={["El objetivo de este centro de rescate es rehabilitar mediante un manejo biológico y veterinario los animales que ingresan a este centro y poder coordinar su posible liberación al medio silvestre. En el Parque se procura la liberación de toda tortuga marina, ave o cocodrilo excepto para el caso de aquellos que no se puedan valer por sí mismos, como es el caso de los pelícanos totalmente inhabilitados para volar, o del caso de dos tortugas marinas que por sus condiciones fisiológicas como la pérdida de sus aletas no es posible su liberación. Estos animales residentes juegan un papel muy importante de educación en los visitantes que llegan al Parque Marino del Pacífico.",]} workAreasTitle={"Nuestros Servicios:"} workAreas={workAreas} buttonText={"Reportar Animal en peligro"} onButtonClick={handleButtonClick} />
 
       <div className=''>
         <TabsContainer tabs={CentroRescateTabs} />

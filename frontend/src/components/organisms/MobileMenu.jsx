@@ -21,6 +21,7 @@ const MobileMenu = ({ isOpen, links, ticketLink }) => {
                 <Link
                   key={sublink.href}
                   to={sublink.href}
+                  target="_blank"
                   className='block py-1 text-gray-700 hover:text-[#26b7ad]'
                 >
                   {sublink.name}
@@ -32,6 +33,7 @@ const MobileMenu = ({ isOpen, links, ticketLink }) => {
           <Link
             key={link.href}
             to={link.href}
+            target="_blank"
             className={`block text-gray-700 hover:text-gray-700 transition ${link.isButton ? 'cursor-pointer' : ''}- ${
               link.isButton
                 ? 'bg-[#26b7ad] text-white font-semibold text-center py-2 rounded-md mt-2 flex items-center justify-center gap-2'
