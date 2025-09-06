@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { getProgramsEducation } from '../../../../api/programsEducation';
+/* import { getProgramsEducation } from '../../../../api/programsEducation'; */
+import programsData from '../data/programsData';
 
 export default function EducationPrograms() {
-  const [programsData, setProgramsData] = useState([]);
+  const [programsDataState, setProgramsDataState] = useState([]);
 
+  // simulacion con datos quemados
+  useEffect(() => {
+    setProgramsDataState(programsData);
+  }, []);
+  
+  /* // uso con backend
   useEffect(() => {
     getProgramsEducation().then((response) => {
-      setProgramsData(response);
+      setProgramsDataState(response);
     });
-  }, []);
+  }, []); */
 
-  console.log(programsData);
+  console.log(programsDataState);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
@@ -19,7 +26,7 @@ export default function EducationPrograms() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        {programsData.map((program) => (
+        {programsDataState.map((program) => (
           <div
             key={program.id}
             className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col"

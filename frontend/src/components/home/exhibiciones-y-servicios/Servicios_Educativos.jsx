@@ -5,19 +5,22 @@ import ExhibitIntro from "./components/ExhibitIntro";
 import MarineExhibit from "./components/MarineExhibit";
 import { getTickets } from "@api/tickets";
 import EducationPrograms from "./components/EducationPrograms";
-/* import EducationalMaterials from './components/EducationalMaterials' */
-/* import materialsData from './data/materialsData' */
-import FeatureCard from "../../atoms/FeatureCardeCard";
+/* import EducationalMaterials from './components/EducationalMaterials'; */
+import materialsData from './data/materialsData';
+import FeatureCard from "../../atoms/FeatureCard";
 import { Link } from "react-router-dom";
 import { Calendar, Users, ShoppingCart, Fish, Award, BookOpen,} from "lucide-react";
-import { getServiciosEducativos } from "@api/servicesEducation";
+/* import { getServiciosEducativos } from "@api/servicesEducation"; */
 
 
 function Servicios_Educativos() {
   const [educationData, setEducationData] = useState([]);
   const [ticketsData, setTicketsData] = useState([]);
 
-  useEffect(() => {
+
+/* uso con backend 
+
+useEffect(() => {
     const fetchServices = async () => {
       try {
         const services = await getServiciosEducativos();
@@ -27,8 +30,13 @@ function Servicios_Educativos() {
       }
     };
     fetchServices();
-  }, []);
+  }, []); */
 
+  // simulacion con datos quemados
+  useEffect(() => {
+    setEducationData(materialsData);
+  }, []);
+  
   useEffect(() => {
     const fetchTickets = async () => {
       try {
@@ -59,7 +67,7 @@ function Servicios_Educativos() {
       />
       {educationData.length > 0 && <MarineExhibit data={educationData} />}
       <EducationPrograms />
-      {/*  <EducationalMaterials data={materialsData} /> */}
+      {/* <EducationalMaterials data={educationData} /> */}
 
       {/*Cards de Precios / Horarios / Compra Ticket */}
       <div className="grid grid-cols-3 gap-4 mb-10 mr-10 ml-10">
