@@ -1,7 +1,7 @@
 // src/components/tabs/ComoAyudarTab.jsx
 
 import React from 'react';
-import { ayudas as ayudasDefault } from '../../data/formasDeAyuda.js';
+import { ayudas as ayudasDefault } from '../home/acuicultura-y-biotecnologia/data/formasDeAyuda.js';
 import * as LucideIcons from 'lucide-react';
 import { useNavigate } from 'react-router-dom'; // solo si usas React Router
 

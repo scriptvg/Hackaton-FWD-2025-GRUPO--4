@@ -1,15 +1,5 @@
 // src/components/educationData.js
 
-import pulpo from '../../../../assets/img/pul.jpg';
-import pulpo2 from '../../../../assets/img/Pulpo.jpg';
-import Contaminacion from '../../../../assets/img/conta2.jpg';
-import Contaminacion2 from '../../../../assets/img/contaminacion_1.jpg';
-import Julia from '../../../../assets/img/julia.jpg';
-import Julia2 from '../../../../assets/img/Tjulia.jpg';
-import Monitoreo from '../../../../assets/img/monitoreo.jpg';
-import Monitoreo2 from '../../../../assets/img/monitoreo_2.jpg';
-import Biologo from '../../../../assets/img/massi.jpg';
-import Biologo2 from '../../../../assets/img/Pes.jpg';
 
 const educationData = [
   {
@@ -23,7 +13,7 @@ const educationData = [
       'Máximo 10 a 15 personas.',
       'Tiempo:30 minutos.'
     ],
-    images: [pulpo, pulpo2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024859/pul_zlnweg.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024922/Pulpo_zcrunw.jpg"],
     buttons: [
       { label: 'Inscribirse', link: '/inscripcion-don-pulpo' },
       { label: 'Ver Guía', link: '/guia-don-pulpo.pdf' }
@@ -41,7 +31,7 @@ const educationData = [
       'Contaminación de los océanos.',
       'Clasificación de los desechos sólidos.'
     ],
-    images: [Contaminacion, Contaminacion2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024962/conta2_qg8v4w.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1755983220/contaminacion_1_hfclrl.jpg"],
     buttons: [
       { label: 'Inscribirse', link: '/inscripcion-contaminacion-de-los-oceanos' }
     ],
@@ -57,7 +47,7 @@ const educationData = [
       'Clasificación de los residuos.',
       'Formas de reutilizar algunos residuos valorizables.'
     ],
-    images: [Julia, Julia2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025130/julia_nzyehb.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025143/Tjulia_kmgkvz.jpg"],
     buttons: [
       { label: 'Inscribirse', link: '/inscripcion-tortuga-julia' }
     ],
@@ -72,7 +62,7 @@ const educationData = [
       'Clasificación valorización y no valorizables.',
       'Ciencia ciudadana.'
     ],
-    images: [Monitoreo, Monitoreo2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025231/monitoreo_szfver.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025232/monitoreo_2_ctzgg2.jpg"],
     buttons: [
       { label: 'Inscribirse', link: '/inscripcion-monitoreo-de-residuos' }
     ],
@@ -89,7 +79,7 @@ const educationData = [
       'Características generales de un molusco.',
       'Enfermedades comunes de los peces.'
     ],
-    images: [Biologo, Biologo2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025316/massi_cnvx2s.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025327/Pes_zibew5.jpg"],
     buttons: [
       { label: 'Solicitar Taller', link: '/solicitar-biologo' }
     ],

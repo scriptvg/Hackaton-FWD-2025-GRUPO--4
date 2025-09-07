@@ -1,25 +1,24 @@
 import React from 'react'
-import QuienesSomos from '../../molecules/QuienesSomos'
-import Tanque from "@assets/img/fotos.verticales_(1).jpg"
-import AboutSection from '../../layouts/AboutSection'
-import ExhibitIntro from '../exhibiciones-y-servicios/components/ExhibitIntro'
-import OurApproach from './components/DescriptionSection'
-import TabsContainer from './components/TabsContainer'
-import SuccessCases from './components/SuccessCases'
-import CallToAction from './components/CallToAction'
-import CultivoTab from './components/tabs/CultivoTab'
-import TecnologiaTab from './components/tabs/TecnologiaTab'
-import ExtensionTab from './components/tabs/ExtensionTab'
-import ProyectosTab from './components/tabs/investigacion/ProyectosTab'
+import QuienesSomos from '../components/molecules/QuienesSomos'
+import AboutSection from '../components/layouts/AboutSection'
+import ExhibitIntro from '../components/home/exhibiciones-y-servicios/components/ExhibitIntro'
+import OurApproach from '../components/atoms/DescriptionSection'
+import TabsContainer from '../components/atoms/TabsContainer'
+import SuccessCases from '../components/atoms/SuccessCases'
+import CallToAction from '../components/atoms/CallToAction'
+import CultivoTab from '../components/molecules/CultivoTab'
+import TecnologiaTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/TecnologiaTab'
+import ExtensionTab from '../components/home/acuicultura-y-biotecnologia/components/tabs/ExtensionTab'
+import ProyectosTab from '../components/molecules/ProyectosTab'
 import { Link } from 'react-router-dom'
-import InvestigationTabs from './components/tabs/investigacion/InvestigacionTab'
+import InvestigationTabs from '../components/molecules/InvestigacionTab'
 /* import { lineasDeInvestigacion, areas } from './data/lineasDeInvestigacion'; */
-import { proyectos } from './data/proyectosData.js';
-import { publicaciones, publicacionesStats  } from './data/publicacionesData.js';
-import { colaboradores, redes  } from './data/colaboradoresData.js';
-import PublicacionesTab from './components/tabs/investigacion/PublicacionesTab';
-import ColaboracionesTab from './components/tabs/investigacion/ColaboracionesTab';
-import GranjasTab from './components/tabs/GranjasTab.jsx'
+import { proyectos } from '../components/home/acuicultura-y-biotecnologia/data/proyectosData.js';
+import { publicaciones, publicacionesStats  } from '../components/home/acuicultura-y-biotecnologia/data/publicacionesData.js';
+import { colaboradores, redes  } from '../components/home/acuicultura-y-biotecnologia/data/colaboradoresData.js';
+import PublicacionesTab from '../components/molecules/PublicacionesTab';
+import ColaboracionesTab from '../components/molecules/ColaboracionesTab';
+import GranjasTab from '../components/molecules/GranjasTab.jsx'
 
 function AcuiculturaBiotecnologia() {
 
@@ -77,10 +76,10 @@ function AcuiculturaBiotecnologia() {
 
   return (
     <div className='flex flex-col items-center mt-23'>
-      <QuienesSomos title={"Acuicultura y Biotecnologia"} description={"Descubre la biodiversidad de Costa Rica "} img={Tanque} />
+      <QuienesSomos title={"Acuicultura y Biotecnologia"} description={"Descubre la biodiversidad de Costa Rica "} img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} />
       <ExhibitIntro description={"El Parque Marino del Pacífico cuenta con un Laboratorio de Acuicultura y Biotecnología Marina (LABM) que es fundamental para su misión de sostenibilidad de los recursos marino-costeros. Este laboratorio no es solo un espacio de investigación, sino que tiene un fuerte componente de extensión y transferencia tecnológica hacia las comunidades costeras de Costa Rica."} title={"Programa de Acuicultura y Biotecnología"} />
       <div className=''>
-        <OurApproach title={"Nuestro Enfoque"} paragraphs={paragraphs} imageSrc={Tanque} workAreasTitle={"Áreas de Trabajo:"} workAreas={workAreas} buttonText={"Conocer más"} onButtonClick={handleButtonClick} imageAlt={"Img del programa"}  />
+        <OurApproach title={"Nuestro Enfoque"} paragraphs={paragraphs} imageSrc={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756024318/fotos.verticales__1_awghmi.jpg"} workAreasTitle={"Áreas de Trabajo:"} workAreas={workAreas} buttonText={"Conocer más"} onButtonClick={handleButtonClick} imageAlt={"Img del programa"}  />
       
       
         <TabsContainer tabs={acuiculturaTabs} defaultValue="cultivo" />

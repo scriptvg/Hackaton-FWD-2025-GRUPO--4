@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import QuienesSomos from '../../molecules/QuienesSomos'
-import Tanque from "@assets/img/Tanque.jpeg"
 import MarineExhibit from './components/MarineExhibit.jsx'
 import ExhibitIntro from './components/ExhibitIntro.jsx'
 import WorldSpeciesMap from '../../WorldSpeciesMap.jsx'
@@ -26,7 +25,7 @@ function Exhibicion() {
 
   return (
     <div className='flex flex-col items-center mt-23'>
-      <QuienesSomos title={"Exhibicion"} description={"Descubre la biodiversidad de Costa Rica "} img={Tanque} />
+      <QuienesSomos title={"Exhibicion"} description={"Descubre la biodiversidad de Costa Rica "} img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756026506/Tanque_gooqo7.jpg"} />
       <ExhibitIntro description={"El Parque Marino Central del Pacifico Sur cuenta con diversas exhibiciones que le permitirán conocer las riquezas de la biodiversidad marina de Costa Rica. Desde la fauna marina, pasando por torutgas marinas, tiburones y rayarios, nuestras exhibiciones te ofrecen una experiencia educativa y entretenida."} title={"Nuestras Exhibiciones"} />
        {exhibits.length > 0 && <MarineExhibit data={exhibits} />}
       <WorldSpeciesMap />

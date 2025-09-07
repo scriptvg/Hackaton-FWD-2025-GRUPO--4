@@ -44,7 +44,7 @@ const socialNetworks = [
 function TopBarRedes() {
   return (
     <>
-      <div className="bg-[#2bb5b1] text-white text-sm px-4 py-1 flex justify-between items-center">
+      <div className="bg-[#2bb5b1] text-[#202020] text-sm px-4 py-1 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <span>Síguenos |</span>
           {/* {[Facebook, Youtube, Instagram].map((Icon, i) => (

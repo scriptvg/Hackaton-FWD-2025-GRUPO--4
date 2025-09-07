@@ -47,7 +47,7 @@ const Equipo = React.lazy(
 const TransparenciaInstitucional = React.lazy(
   () =>
     import(
-      "../pages/Public/pages/Quienes_Somos/Pages/Transparencia_Institucional.jsx"
+      "../components/layouts/Transparencia_Institucional.jsx"
     )
 );
 const Exhibiciones = React.lazy(

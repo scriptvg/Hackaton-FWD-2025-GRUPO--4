@@ -1,22 +1,4 @@
-import Cocodrilo from '../../../../assets/img/Figuras_turismo/Figura_turismo_1.jpg';
-import Tortuga_T from '../../../../assets/img/Figuras_turismo/Figura_turismo_2.jpg';
-import Caiman from '../../../../assets/img/Figuras_turismo/Figura_turismo_3.jpg';
 
-import IslaDelCoco from '../../../../assets/img/Figuras_turismo/Figura_turismo_4.jpg';
-import IslaDelCoco2 from '../../../../assets/img/Figuras_turismo/Figura_turismo_5.jpg';
-import IslaDelCoco3 from '../../../../assets/img/Figuras_turismo/Figura_turismo_6.jpg';
-
-import Acuario from '../../../../assets/img/Figuras_turismo/Figura_turismo_7.jpeg';
-import Acuario2 from '../../../../assets/img/Figuras_turismo/Figura_turismo_8.jpeg';
-
-import Raya from '../../../../assets/img/Figuras_turismo/Figura_turismo_9.jpg';
-import Raya2 from '../../../../assets/img/Figuras_turismo/Figura_turismo_10.jpg';
-
-import Tortuga_M from '../../../../assets/img/Figuras_turismo/Figura_turismo_11.jpg';
-import Tortuga_M2 from '../../../../assets/img/Figuras_turismo/Figura_turismo_12.jpg';
-
-import Tiburon from '../../../../assets/img/Figuras_turismo/Figura_turismo_13.jpg';
-import Tiburon2 from '../../../../assets/img/Figuras_turismo/Figura_turismo_14.jpg';
 
 const exhibitsData = [
   {
@@ -33,7 +15,7 @@ const exhibitsData = [
       'Ambos forman parte de nuestros pacientes residentes del centro de rescate',
       'Podrás observar diferentes especies de tortugas terrestres y así generar conciencia para la tenencia responsable de animales silvestres',
     ],
-    images: [Cocodrilo, Caiman, Tortuga_T],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025789/Figura_turismo_1_ltwccm.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025642/Figura_turismo_3_fwujuh.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025789/Figura_turismo_2_zqfpbl.jpg"],
     buttons: [
       { label: 'Visita nuestra exhicion de reptiles', link: '/' }
     ],
@@ -53,7 +35,7 @@ const exhibitsData = [
       'A través de una maqueta interactiva, podrás observar cómo transcurre un día y una noche en la isla',
       'Apreciando sus paisajes y hábitats. Además, un video inmersivo que mostrará las especies más emblemáticas que habitan este paraíso natural',
     ],
-    images: [IslaDelCoco, IslaDelCoco2, IslaDelCoco3],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025642/Figura_turismo_4_wq1fan.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025642/Figura_turismo_5_nroywg.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025643/Figura_turismo_6_hx8clb.jpg"],
     buttons: [
       { label: 'Visita nuestra exhibicion', link: '/exhibicion' }
     ],
@@ -68,7 +50,7 @@ const exhibitsData = [
     facts: [
       'Nuestro acuario está orientado a la fauna marina, donde se fomente la educación ambiental, la sensibilización y la conservación de la vida silvestre.',
     ],
-    images: [Acuario, Acuario2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025643/Figura_turismo_7_lcdahe.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025643/Figura_turismo_8_gxqcfl.jpg"],
     buttons: [
       { label: 'Visita nuestra acuarios', link: '/acuarios' }
     ],
@@ -85,7 +67,7 @@ const exhibitsData = [
       'Observarlas de cerca es una experiencia inolvidable, ideal tanto para quienes visitan por primera vez como para amantes del mundo marino',
       '¿Sabías que muchas personas confunden a las rayas con las mantarrayas? Aunque a simple vista puedan parecer similares, en realidad son especies diferentes con características únicas.',
     ],
-    images: [Raya, Raya2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025647/Figura_turismo_9_sizvdr.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025647/Figura_turismo_10_lusm5y.jpg"],
     buttons: [
       { label: 'Visita nuestra exhibicion de rayas', link: '/exhibicion-rayas' }
     ],
@@ -103,7 +85,7 @@ const exhibitsData = [
       'Desde su capacidad para navegar miles de kilómetros hasta su sorprendente longevidad',
       '¡Conoce y aprende cómo podemos protegerlas para garantizar su supervivencia en nuestros océanos!',
     ],
-    images: [Tortuga_M2, Tortuga_M],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025647/Figura_turismo_11_yfvacb.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025648/Figura_turismo_12_j6zx2j.jpg"],
     buttons: [
       { label: 'Visita nuestra exhibicion de tortugas', link: '/exhibicion-tortugas' }
     ],
@@ -120,7 +102,7 @@ const exhibitsData = [
       'El nombre "nodriza" se debe a su forma de cuidar a sus crías, y "gata" a las protuberancias en su morro, que recuerdan a los bigotes de un gato',
       'Vive en una variedad de hábitat costeros poco profundos como aguas insulares, arrecifes rocosos o coralinos, áreas arenosas, entre otras, desde la zona entre mareas hasta los 15 metros.',
     ],
-    images: [Tiburon, Tiburon2],
+    images: ["https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025650/Figura_turismo_13_ev5bjy.jpg", "https://res.cloudinary.com/dmgz3csfp/image/upload/v1756025651/Figura_turismo_14_rn8dys.jpg"],
     buttons: [
       { label: 'Visita nuestra exhibicion de tiburones', link: '/exhibicion-tiburones' }
     ],

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2 } from "lucide-react";
-import logo from "@assets/img/LOGO.webp";
+
 
 export default function Loading({
   isVisible = true,
@@ -31,7 +31,7 @@ export default function Loading({
           transition={{ duration: 0.6 }}
         >
           <motion.img
-            src={logo}
+            src={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1756028259/LOGO_purjjo.webp"}
             alt="Logo"
             className="w-32 h-32 mb-6"
             animate={{ y: [0, -10, 0] }}

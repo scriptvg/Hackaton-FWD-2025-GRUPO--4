@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import QuienesSomos from "../../molecules/QuienesSomos";
-import contaminacion from "@assets/img/contaminacion_1.jpg";
 import ExhibitIntro from "./components/ExhibitIntro";
 import MarineExhibit from "./components/MarineExhibit";
 // import EducationalExhibit from "./components/EducationalExhibit";
@@ -58,7 +57,7 @@ useEffect(() => {
       <QuienesSomos
         title={"Servicios Educativos"}
         description={"Programas educativos para los jovenes"}
-        img={contaminacion}
+        img={"https://res.cloudinary.com/dmgz3csfp/image/upload/v1755983220/contaminacion_1_hfclrl.jpg"}
       />
       <ExhibitIntro
         description={

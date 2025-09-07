@@ -68,7 +68,7 @@ function Carousel() {
 
   return (
     <section
-      className="relative mx-auto overflow-hidden mt-24 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[560px] max-w-screen-xl"
+      className="relative w-full overflow-hidden mt-24 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
       onMouseEnter={enhancedHandlePause}
       onMouseLeave={enhancedHandleResume}
       onFocus={enhancedHandlePause}
@@ -82,8 +82,8 @@ function Carousel() {
         {`Slide ${currentSlide + 1} of ${images.length}`}
       </div>
 
-      {/* Slide container */}
-      <div ref={sliderRef} className="keen-slider h-full">
+      {/* Slide container - ahora ocupa todo el ancho */}
+      <div ref={sliderRef} className="keen-slider h-full w-full">
         {images.map((img, index) => (
           <Slide
             key={index}
@@ -108,15 +108,6 @@ function Carousel() {
         instanceRef={instanceRef}
         setDirection={setDirection}
       />
-
-      {/* Autoplay toggle button */}
-      <button
-        onClick={isAutoPlaying ? enhancedHandlePause : enhancedHandleResume}
-        className="absolute top-4 right-4 z-10 bg-white px-3 py-1 rounded shadow text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        aria-label={isAutoPlaying ? "Pause carousel" : "Resume carousel"}
-      >
-        {isAutoPlaying ? "Pause" : "Play"}
-      </button>
     </section>
   );
 }
