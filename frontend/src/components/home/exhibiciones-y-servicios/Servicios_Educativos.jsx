@@ -3,6 +3,7 @@ import QuienesSomos from "../../molecules/QuienesSomos";
 import contaminacion from "@assets/img/contaminacion_1.jpg";
 import ExhibitIntro from "./components/ExhibitIntro";
 import MarineExhibit from "./components/MarineExhibit";
+// import EducationalExhibit from "./components/EducationalExhibit";
 import { getTickets } from "@api/tickets";
 import EducationPrograms from "./components/EducationPrograms";
 /* import EducationalMaterials from './components/EducationalMaterials'; */
